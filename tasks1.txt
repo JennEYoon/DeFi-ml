@@ -1,0 +1,14 @@
+#  Task list for SEC data machine learning repo.
+
+Date:  8/25/2019  8:00 PM  
+
+ * Credit ratings transition matrix data from FINRA economist -- explore.
+ * ML credit risk dataset from Kaggle, Udemy -- explore.
+ * EIA.gov energy trading data -- explore.
+ * SEC Edgar company financial statements data -- explore.
+ * FED macro economic data -- explore.
+ * DTC massive database -- explore.  
+ 
+
+
+
