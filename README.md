@@ -1,5 +1,5 @@
 # SECdataPy  
-My SEC data Machine Learning Project (Securities &amp; Exchange Commission).    
+My SEC data Python Machine Learning Project (Securities &amp; Exchange Commission).    
 
 #### Author: Jennifer E. Yoon  
 
