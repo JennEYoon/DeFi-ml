@@ -1,12 +1,13 @@
 # SECdataPy  
-My SEC data Python Machine Learning Project (Securities &amp; Exchange Commission).    
+My SEC data Python Machine Learning Project (Securities and Exchange Commission).    
 
 #### Author: Jennifer E. Yoon  
 
 #### Description:  
 
-Paragraph text here to add.  
+My goal is to provide examples of using Machine Learning on SEC data and financial derivative instruments trading data more generally.  I will use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, SciPy, and Scikit-Learn.  I use the Jupyter Notebook as my interface for showing code.  Some of the examples from here will be highlighted at a data science projects website, **http://datasciY.com** .
 
+My earlier projects will focus on visualization using various Python graphics libraries.  My later projects will focus on applying commonly used Machine Learning methods to datasets from the financial industry.  
 
 #### History:  
 
