@@ -1,14 +1,28 @@
 #  Task list for SEC data machine learning repo.
 
-Date:  8/25/2019  8:00 PM  
+Date:  8/24/2019  2:00 AM EST -- inspired by DREAM.    
 
  * Credit ratings transition matrix data from FINRA economist -- explore.
  * ML credit risk dataset from Kaggle, Udemy -- explore.
- * EIA.gov energy trading data -- explore.
+ * EIA.gov energ derivativesy trading data -- explore.
  * SEC Edgar company financial statements data -- explore.
+ * SEC - FINRA Credut Risk data.
+ * Stress Tests, FED, SEC, Treasury.
  * FED macro economic data -- explore.
+ * Leverage ratios, and systemic risk calculations - from public data, other analysts.
  * DTC massive database -- explore.  
  
+Date:  9/16/2019 - Projects datasciY.com  
 
+ * Visualize Matplotlib 3D option implied vol surface  
+ * Visualize Plotly and Dash, interactive graphics
+ * Visualize Bokeh financial time series data
+ * Visualize Tableau economics data
+ 
+ * Amazon Lambda -- setting up Ubutu and Windows machines with Python + Libraries in layers.  
+ * Currently writing questions for GARP FRM - Oct 15th due.
+   * Go ahead and finish this week. Total of 6-8 questions.
+  
+ 
 
 
