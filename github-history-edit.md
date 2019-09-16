@@ -22,11 +22,13 @@ One of the greatest and worst things with git is that you can rewrite the histor
  * Then git add . , git commit -m "", git pull to merge two histories, git push to change history on Github.  
 
 #### Set the date of an arbitrary commit to an arbitrary or current date  
->Rebase to before said commit and stop for amendment:  
->
->git rebase <commit-hash>^ -i  (Copy commit long-hash number)  
->Replace **pick** with **e** (edit) on the line with that commit (the first one)  
->quit the editor (ESC followed by :wq in VIM)  
+
+Rebase to before said commit and stop for amendment:  
+  ```bash
+  git rebase /<commit-hash>^ -i  (Copy commit long-hash number)  
+  Replace **pick** with **e** (edit) on the line with that commit (the first one)  
+  quit the editor (ESC followed by :wq in VIM)  
+  ```
 
 Either:
 >GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"  
@@ -37,3 +39,26 @@ Split an existing git commit. https://codewithhugo.com/split-an-existing-git-com
 
 Following any of these 3 options, you will want to run:  
 >git rebase --continue  
+
+***Woohoo! Also worked!!***  
+
+ * First changed to datasciY repo, git pull to update local repo.
+ * Next, give rebase command with commit number long-hash.  
+   git rebase 76ec9db8ec3c7affda7495a619bcbbb6ca1bbe98^ -i  
+   ```bash
+   (output)               
+   Stopped at 76ec9db...  Update tasks-website.md                                                
+   You can amend the commit now, with
+      git commit --amend                                                                  
+   Once you are satisfied with your changes, run  
+      git rebase --continue  
+   ```  
+ * Git opens default editor (Nano) with 4 commits around hash-number-commit.  
+ * Replace "pick" with "edit" in front of the commit I want to edit (2nd from top).
+ * Save and Close editor.
+ * Git prompts with: "git commit --amend"
+   Edit with "GIT_COMMITTER_DATE="Sep 14, 2019 1:00 PM EST" git commit --amend ..."
+   Run "git rebase --continue"
+ * Do git add ., git commit, git pull, git push.
+ 
+ Merges both histories of unedited and edited.  Seems to add commit numbers to original date AND changed date.  
