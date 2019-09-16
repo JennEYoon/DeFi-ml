@@ -42,7 +42,7 @@ Following any of these 3 options, you will want to run:
 
 ***Woohoo! Also worked!!***  
 
- * First changed to datasciY repo, git pull to update local repo.
+ * First changed to datasciY repo, git pull to update local repo.  
  * Next, give rebase command with commit number long-hash.  
    git rebase 76ec9db8ec3c7affda7495a619bcbbb6ca1bbe98^ -i  
    ```bash
@@ -53,12 +53,19 @@ Following any of these 3 options, you will want to run:
    Once you are satisfied with your changes, run  
       git rebase --continue  
    ```  
- * Git opens default editor (Nano) with 4 commits around hash-number-commit.  
- * Replace "pick" with "edit" in front of the commit I want to edit (2nd from top).
- * Save and Close editor.
- * Git prompts with: "git commit --amend"
-   Edit with "GIT_COMMITTER_DATE="Sep 14, 2019 1:00 PM EST" git commit --amend ..."
-   Run "git rebase --continue"
- * Do git add ., git commit, git pull, git push.
+ * Git opens default editor (Nano) with 4 commits around hash-number-commit.    
+ * Replace "pick" with "edit" in front of the commit I want to edit (2nd from top).  
+ * Save and Close editor.  
+ * Git prompts with: "git commit --amend"  
+   Edit with "GIT_COMMITTER_DATE="Sep 14, 2019 1:00 PM EST" git commit --amend ..."  
+   Run "git rebase --continue"  
+ * Do git add ., git commit, git pull, git push.  
  
- Merges both histories of unedited and edited.  Seems to add commit numbers to original date AND changed date.  
+#### Result Evalutaion  
+Merges both histories of unedited and edited.  Seems to add commit numbers to original date AND changed date.    
+Creates /datasciY/.git/rebase-merge.  Need to "rm -fr ..." to do another merge task.
+Creates conflicts, so is easiest to move self-contained new file, or move all commits related to the one file to the new date.
+
+Works pretty well.  Worth practicing with "git rebase".
+
+
