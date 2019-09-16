@@ -1,0 +1,18 @@
+#  This is a test of editing Github history.
+*** To MOVE, 3 commits on datasciY from 9/15/2019 back one day to 9/14/2019. *** 
+
+ * 9/15/2019 has 8 contributions.
+ 
+    - 5 datasciY
+    - 3 are for tasks.md update, spelling corrections.
+         a4e5215b418dd3b2de94c05c7d3a35f825eee0ff
+         e78796c7c3aeb87ec2e2df35778729889eb20219
+         76ec9db8ec3c7affda7495a619bcbbb6ca1bbe98
+
+   - 3 secdatapy
+ 
+ * 9/14/2019 has zero contributions.  
+ 
+ * 9/13/2019 has 6 contributions.
+   - 4 datasciY
+   - 2 learnmldl
