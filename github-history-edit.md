@@ -11,13 +11,13 @@ One of the greatest and worst things with git is that you can rewrite the histor
 >GIT_COMMITTER_DATE="Mon 20 Aug 2018 20:19:19 BST" git commit --amend --no-edit --date "Mon 20 Aug 2018 20:19:19 BST"  
   
   ***Woohoo! Worked!***
->GIT_COMMITTER_DATE="Sep 14, 2019 1:00 PM EST" git commit --amend --no-edit --date "Sep 14, 2019 1:00 PM EST"    
-> (output)
->[master a78163c] Create git-test-hist1.txt                                                     
->A>uthor: Jennifer E. Yoon <jenneyoon@gmail.com>                                                
->Date: Sat Sep 14 13:00:00 2019 -0500                                                          
->1 file changed, 7 insertions(+)                                                              
->create mode 100644 git-test-hist1.txt 
+  >GIT_COMMITTER_DATE="Sep 14, 2019 1:00 PM EST" git commit --amend --no-edit --date "Sep 14, 2019 1:00 PM EST"    
+  > (output)
+  >[master a78163c] Create git-test-hist1.txt                                                     
+  >Author: Jennifer E. Yoon <jenneyoon@gmail.com>                                                
+  >Date: Sat Sep 14 13:00:00 2019 -0500                                                          
+  >1 file changed, 7 insertions(+)                                                              
+  >create mode 100644 git-test-hist1.txt 
 
  * Then git add . , git commit -m "", git pull to merge two histories, git push to change history on Github.  
 
