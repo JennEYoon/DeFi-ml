@@ -64,8 +64,12 @@ Following any of these 3 options, you will want to run:
 #### Result Evalutaion  
 Merges both histories of unedited and edited.  Seems to add commit numbers to original date AND changed date.    
 Creates /datasciY/.git/rebase-merge.  Need to "rm -fr ..." to do another merge task.
-Creates conflicts, so is easiest to move self-contained new file, or move all commits related to the one file to the new date.
+Creates conflicts after the first rebase, so is easiest to move self-contained new file.
+Easiest to create a brand new file, commit it once, and edit commit date.
+That does not seem to create conflict.
+When editing date of existing file that was committed before, that seems to create a conflict.
 
-Works pretty well.  Worth practicing with "git rebase".
+Works pretty well.  Worth practicing interactive editing with "git rebase".  
+Read more about how the **cherry picker** works in **git rebase**.
 
 
