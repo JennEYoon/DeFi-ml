@@ -26,6 +26,13 @@ Date:  9/16/2019 - Projects datasciY.com
  * 9/21/2019 - Updated meta keywords (search terms) on all html pages.  
  * Installed spell checker to VS Code.  Try it out later.  
  
- 
+ * 9/21/2019 Update 8:25 PM   
+    * Next week get 3 plotting sutff done for "Projects.html" page on datasciY.com.  
+    * Next week -- working on GARP FRM Question writing, finish 6 more.
+    * Next week -- Confirm John Bogovic speaking at October 8th Meetup.  
+    * Next week -- 3 to 5 more Stack Overflow Answers.  Shoot for 600 pts. Need 80 more pts, 522 now.  
+    -------------------
+    * Other Tasks -- Home garden, 4h per day 3-4 days next week AM.  
+    * Other Goal -- Begin daily exercise, either 8:30 AM or 4:30 PM.  
 
 
