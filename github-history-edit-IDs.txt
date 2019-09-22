@@ -16,3 +16,12 @@
  * 9/13/2019 has 6 contributions.
    - 4 datasciY
    - 2 learnmldl
+   
+   ### Only edited SECdataPy and datasciY repos.   
+   Not touched learn-mldl repo.  Chris forked my repo, so do not want to "rebase" this.  
+   
+   Created Temp file in .git folder.  
+   Later delete temp file logs.  
+   Also seem to add commits to the original dates, 9/15/2019 and 9/16/2019.  
+   
+   Emailed Hugo -- Thank you note.  
