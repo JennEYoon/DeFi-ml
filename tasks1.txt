@@ -31,6 +31,9 @@ Date:  9/16/2019 - Projects datasciY.com
     * Next week -- working on GARP FRM Question writing, finish 6 more.
     * Next week -- Confirm John Bogovic speaking at October 8th Meetup.  
     * Next week -- 3 to 5 more Stack Overflow Answers.  Shoot for 600 pts. Need 80 more pts, 522 now.  
+    * **9/24/2019 update** -- this week and next, finish Numpy chapter VanderPlas. -60-90?  
+    * Focus on reading and writing data objects to file, reduce memory cache/buffer 
+      - SO 56GB buffer Questioner, SO NASA data object write questioner.  
     -------------------
     * Other Tasks -- Home garden, 4h per day 3-4 days next week AM.  
     * Other Goal -- Begin daily exercise, either 8:30 AM or 4:30 PM.  
