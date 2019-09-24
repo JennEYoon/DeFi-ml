@@ -35,6 +35,7 @@ Date:  9/16/2019 - Projects datasciY.com
     -------------------
     * Other Tasks -- Home garden, 4h per day 3-4 days next week AM.  
     * Other Goal -- Begin daily exercise, either 8:30 AM or 4:30 PM.  
+                    7-9 PM is another good block for gym classes + yoga/swim.  
 
  * **9/24/2019 update** 
     * This week and next, finish Numpy chapter VanderPlas. pages 70-96.   
