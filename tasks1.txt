@@ -43,3 +43,10 @@ Date:  9/16/2019 - Projects datasciY.com
     * Focus on reading and writing data objects to file, reduce memory cache/buffer 
       - SO 56GB buffer Questioner, SO NASA data object write questioner. 
     * Lookup SEC/FINRA TRACE corporate bond credit ratings database.  What state is it now?
+
+### Update 9/28/2019  Eata - Economic Inequality, Map.  
+
+ * New report, USA greatest inequality in history, yet number of people in poverty is lower than ever before, absolute improvement.  Unemployment is also lower, but check total labor force participation.  
+  * https://www.washingtonpost.com/business/2019/09/26/income-inequality-america-highest-its-been-since-census-started-tracking-it-data-show/  
+   * 
+ 
