@@ -1,6 +1,6 @@
 #  Download and add some data sets here.  
 
-#### 1. Inequality  
+#### 1. Inequality - U.S. Census   
 
  Gini index is highest in US in 5 decades.  
  Number of people under $15,000 per year per family, is lowest ever.  
@@ -10,4 +10,7 @@
  https://www.census.gov/topics/income-poverty/income-inequality.html  
 
 https://www.census.gov/library/visualizations/interactive/2018-median-household-income.html  
+
+Can download data in various formats, including Tableau.  
+Maps also available.  
 
