@@ -11,6 +11,8 @@
 
 https://www.census.gov/library/visualizations/interactive/2018-median-household-income.html  
 
+![2018 US median income map](2018map-income-inequality.png)
+
 Can download data in various formats, including Tableau.  
 Maps also available.  
 
