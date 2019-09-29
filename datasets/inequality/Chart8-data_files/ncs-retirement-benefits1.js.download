@@ -1,0 +1,802 @@
+$(document).ready(function () {
+
+                                ///////add commas function
+
+								function addCommas(val) {
+									if ((val>999)|| (val<-999) ){
+										while (/(\d+)(\d{3})/.test(val.toString())) {
+											val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+										}
+									}
+									return val;
+							   }
+
+
+
+
+
+                                /**
+
+                                 * Highcharts plugin for setting a lower opacity for other series than the one that is hovered
+
+                                 * in the legend
+
+                                 */
+
+                                (function (Highcharts) {
+
+                                    var each = Highcharts.each;
+
+
+
+                                    Highcharts.wrap(Highcharts.Legend.prototype, 'renderItem', function (proceed, item) {
+
+                                        proceed.call(this, item);
+
+
+                                        var series = this.chart.series,
+
+                                            element = item.legendGroup.element;
+
+
+
+                                        element.onmouseover = function () {
+
+                                            each(series, function (seriesItem) {
+
+                                                if (seriesItem !== item) {
+
+                                                    each(['group', 'markerGroup'], function (group) {
+
+                                                        seriesItem[group].attr('opacity', 0.10);
+
+                                                    });
+
+                                                }
+
+                                            });
+
+                                        }
+
+                                        element.onmouseout = function () {
+
+                                            each(series, function (seriesItem) {
+
+                                                if (seriesItem !== item) {
+
+                                                    each(['group', 'markerGroup'], function (group) {
+
+                                                        seriesItem[group].attr('opacity', 1);
+
+                                                    });
+
+                                                }
+
+                                            });
+
+                                        }
+
+
+
+                                    });
+
+                                }(Highcharts));
+
+                                ///end gray out plugin
+
+
+
+
+
+                                var chart9_chart = new Highcharts.Chart({
+
+                                    chart: {
+
+                                        renderTo: "chart9",
+
+                                        spacingLeft: 20,
+
+                                        spacingRight: 20,
+
+                                        // margin: [110, 60, 70, 70], //[top, right, bottom, left], the higher the number the more pushed in
+
+                                        marginBottom: 80,
+
+                                        marginTop: 105,
+
+                                        marginLeft: 55,
+
+                                        marginRight: 40,
+
+                                        borderColor: 'white',
+
+                                        plotBorderWidth: 1,
+
+                                        plotBorderColor: 'none',
+
+                                        defaultSeriesType: "column", //line, bar, etc...
+
+                                        zoomType: null,
+										
+										inverted: false
+
+                                    },
+
+                                    title: {
+
+                                        text: "Percentage of private industry workers with access to retirement benefits for selected wage groups, March 2014",
+
+                                        align: 'left',
+
+                                        x: 0,
+
+                                        style: {
+
+                                            color: '#000000',
+
+                                            fontFamily: 'sans-serif',
+
+                                            fontWeight: 'bold',
+
+                                            width: '540px',
+
+                                            fontSize: '14px'
+
+
+
+                                        }
+
+
+
+                                    },
+
+                                    ///////series data//////////////////        
+
+                                    series: [{"name":"All retirement benefits","data":[27,38,67,76,85,88],"color":"rgb(0, 0, 153)"},{"name":"Defined benefit plan","data":[4,5,14,24,36,37],"color":"rgb(153, 0, 0)"},{"name":"Defined contribution plan","data":[25,36,62,70,80,85],"color":"rgb(0, 102, 204)"}],
+
+                                    ///////////////x axis/////////////////////
+
+                                    xAxis: {
+
+
+
+                                        title: {
+
+                                            text: '',
+
+                                            margin: 6,
+
+                                            style: {
+
+                                                color: '#000000',
+
+                                                fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                                fontWeight: 'normal',
+
+
+
+                                                backgroundColor: '#fff',
+
+                                                fontSize: '13px'
+
+                                            }
+
+                                        },
+
+                                        tickInterval: 1,
+
+                                        tickmarkPlacement: 'on',
+
+
+
+                                        tickPosition: 'outside',
+
+                                        lineWidth: 1.2,
+
+                                        lineColor: 'gray',
+
+
+
+
+
+                                        labels: {
+
+                                            //   formatter: function() {return Highcharts.numberFormat(this.value,0)},
+
+                                            formatter: function () {
+
+                                                var hideMonths = false;
+
+                                                if (hideMonths == true) {
+
+                                                    return this.value.replace(/\D+/g, '');
+
+                                                } else {
+
+                                                    return this.value;
+
+                                                }
+
+                                            },
+
+
+
+                                            rotation: 0,
+
+
+
+                                            //	overflow: 'justify',
+
+
+                                            // x: -2,
+
+                                            //     y: 18,
+
+                                            style: {
+
+                                                color: '#000000',
+
+                                                fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                                fontWeight: 'normal',
+
+                                                backgroundColor: '#fff',
+
+                                                fontSize: '12px'
+
+                                            }
+
+                                        },
+
+                                        plotBands: [],
+
+
+
+
+
+                                        categories: ["Lowest 10 percent","Lowest 25 percent","Second 25 percent","Third 25 percent","Highest 25 percent","Highest 10 percent"]
+
+                                    },
+
+                                    //end xaxis
+
+
+
+
+
+
+
+
+
+                                    //////////// Y AXIS ////////////////////////////////////
+
+
+
+                                    yAxis: [{
+
+                                            type: 'linear',
+
+                                            labels: {
+
+                                                formatter: function () {
+
+                                                   var thisValue = this.value / 1;
+												   													
+													
+													if (false == true) { // if forced decimals chosen
+
+                                                        return ' ' + Highcharts.numberFormat(thisValue, 0) + '';
+
+                                                    } else {
+
+                                                        return ' ' +  addCommas(thisValue) +'';
+
+                                                    }
+
+                                                },
+
+
+
+                                                style: {
+
+                                                    color: '#000000',
+
+                                                    fontWeight: 'normal',
+
+                                                    backgroundColor: '#fff',
+
+                                                    fontSize: '12px',
+
+                                                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                                                }
+
+
+
+                                            },
+
+
+
+                                            tickInterval: null,
+
+
+
+                                            tickWidth: 1,
+
+                                            lineWidth: 1,
+
+                                            lineColor: 'gray',
+
+                                            gridLineColor: '#c0c0c0',
+
+                                            gridLineWidth: 1.0,
+
+                                            gridLineDashStyle: 'Dot',
+
+
+
+                                            min: null,
+
+                                            max: null,
+
+                                            plotLines: [{"value":0,"color":"#c0c0c0","dashStyle":"solid","width":1}],
+
+
+
+
+
+                                            title: {
+
+                                                align: 'high',
+
+                                                offset: 0,
+
+                                                text: 'Percent',
+
+                                                rotation: 0,
+
+                                                y: -15,
+
+                                                x: 23,
+
+
+
+                                                style: {
+
+                                                    color: '#000000',
+
+                                                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                                    fontWeight: 'normal',
+
+                                                    backgroundColor: '#fff',
+
+                                                    fontSize: '13px'
+
+                                                }
+
+                                            }
+
+  },
+
+  ///second y axis (for butterfly)
+
+
+
+                                        {
+
+                                            labels: {
+
+                                                formatter: function () {
+
+                                                    return ""
+
+
+                                                }
+
+                                            },
+
+
+
+                                            tickWidth: 0,
+
+                                            gridLineWidth: 0,
+
+                                            lineWidth: 0,
+
+                                            //  min: 0,
+
+                                            //  max: 20,
+
+                                            plotLines: null,
+
+                                            title: {
+
+                                                text: ''
+
+                                            },
+
+                                            linkedTo: 0,
+
+                                            opposite: true
+
+  } //end second y axis
+
+  ],
+
+
+
+                                    ////////////////////LEGEND////////////////////
+
+
+                                    legend: {
+
+                                        layout: 'horizontal',
+
+                                        enabled: true,
+
+                                        //make vertical or horizontal
+
+                                        backgroundColor: 'none',
+
+                                        borderWidth: 0,
+
+                                        borderColor: 'none',
+
+                                        shadow: false,
+
+                                        align: 'center',
+
+                                        //alignment of legend items
+
+                                        verticalAlign: 'top',
+
+                                        x: 0,
+
+                                        //Higher number moves legend right
+
+                                        y: 40,
+
+                                        //Higher number moves legend down
+
+                                        // width: 590,
+
+                                        //small widths will cause horizontal layouts to stack
+
+                                        floating: false,
+
+                                        //true makes legend independent of chart objects
+
+                                        reversed: false,
+
+                                        //reverses legend item order - handy to line up with column order
+
+                                        //  itemWidth: 195,
+
+                                        symbolWidth: 30,
+
+
+
+                                        itemStyle: { //Three legend item styles for active, hover, and deselected - setting these specifically fixes browser differences
+
+                                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+
+
+                                            lineHeight: 1.2,
+
+                                            color: '#000080'
+
+
+
+                                        },
+
+                                        itemHiddenStyle: {
+
+                                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                            color: 'gray',
+
+                                            lineHeight: 1.2
+
+
+
+                                        },
+
+
+
+
+
+
+
+
+
+                                        itemHoverStyle: {
+
+                                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                            lineHeight: 1.2
+
+                                            //	,cursor: "default"  ///un note when legend click is disabled
+
+
+
+                                        }
+
+                                    },
+
+
+
+                                    ///////////////////////TOOLTIP///////////////////// (making from table)
+
+
+                                    tooltip: {
+
+                                        backgroundColor: '#FCFFC5',
+
+                                        useHTML: true,
+
+                                        style: {
+
+
+                                            color: '#000000',
+
+                                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                                        },
+
+                                        //tooltip is what shows on hover
+
+                                        formatter: function () {
+
+
+
+                                            //function to add dollarsigns if needed, and correctly do it for neg values
+
+                                            var negDollarFormat = function (val) {
+
+                                                if (false == true) { //if using dollars == true
+
+                                                    ///convert to number again
+
+                                                    val = Number(val.replace(/,/g, ""));
+
+                                                    if (val >= 0) {
+
+                                                        return "$" + Highcharts.numberFormat(val, 0);
+
+                                                    } else {
+
+                                                        return "-$" + Highcharts.numberFormat(Highcharts.numberFormat(Math.abs(val), 0), 0);
+
+                                                    }
+
+                                                } else { ///not using dollars
+
+                                                    return val;
+
+                                                }
+
+                                            }
+
+
+
+                                            ///for single tooltip	         
+
+                                            if (false == false) {
+
+                                                var s = '' + this.series.name + '<br>' + this.x + ": " + '<b>' + negDollarFormat(Highcharts.numberFormat(this.y * 1, 0)) + '%' + '</b>';
+
+                                            } else {
+
+                                                ///for shared tooltip
+
+                                                var s = '<b>' + this.x + '</b>';
+
+                                                $.each(this.points, function (i, point) {
+
+                                                    s += '<br/><span style="color: ' + point.series.color + '">' + point.series.name + '</span>: ' + '<b>' +
+
+                                                        negDollarFormat(Highcharts.numberFormat(point.y * 1, 0)) + '%' + '</b>';
+
+                                                });
+
+
+
+
+
+                                            }
+
+                                            return s.replace("$ ", "$");
+
+                                        },
+
+                                        shared: false
+
+
+
+                                    },
+
+
+
+
+
+
+
+
+
+                                    /////////////////PLOT OPTIONS///////////////////
+
+                                    plotOptions: {
+
+                                        series: {
+
+
+
+                                            /* un note to turn off legend click - remember to change cursor to "default" in legend properties
+
+				events: {
+
+            legendItemClick: function () {
+
+                return false; 
+
+            }
+
+				},
+
+			*/
+
+                                            dataLabels: {
+
+                                                enabled: false
+
+                                            },
+
+                                            pointPadding: 0.1, //padding between points in bar charts  (0 is tight)1 is loose
+
+                                            groupPadding: 0.2, // padding between groups in bar charts (0 is tight)1 is loose
+
+                                            pointPlacement: null,
+
+                                            stacking: null,
+
+                                            borderWidth: 0,
+
+
+
+                                            shadow: false,
+
+                                            animation: true
+
+
+
+
+
+                                        },
+
+                                        line: {
+
+                                            lineWidth: 1.5,
+
+                                            states: {
+
+                                                hover: {
+
+                                                    lineWidth: 4
+
+                                                }
+
+                                            },
+
+                                            marker: {
+
+                                                enabled: false,
+
+                                                //status of tick symbols
+
+                                                states: {
+
+                                                    hover: {
+
+                                                        enabled: true,
+
+                                                        //    symbol: 'circle',
+
+                                                        radius: 5,
+
+                                                        lineWidth: 1
+
+                                                    }
+
+                                                }
+
+                                            }
+
+                                        }
+
+
+
+
+
+                                    },
+
+
+
+
+
+
+
+                                    credits: {
+
+                                        text: "Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.",
+
+                                        position: {
+
+                                            align: 'left',
+
+                                            x: 10,
+
+                                            y: -20
+
+                                        },
+
+                                        style: {
+
+                                            cursor: "default" //color: "black"
+
+                                        },
+
+                                        href: ""
+
+                                    },
+
+
+
+                                    exporting: {
+
+                                        buttons: {
+
+
+                                            contextButton: {
+
+                                                enabled: true,
+
+                                                verticalAlign: 'bottom',
+
+                                                x: -10
+
+
+
+
+
+                                            }
+
+
+
+                                        }
+
+                                    }
+
+                                });
+
+
+
+                                /* Saved chart information - paste this into chartmaker to load chart
+
+
+
+
+
+ {"chartType":"column","dataLabelsEnabled":false,"isStacked":false,"chartPointPadding":0.1,"chartGroupPadding":0.2,"chartWidth":"580","chartHeight":"400","chartID":"chart9","useMLRStyles":false,"chartIsInverted":false,"chartIsZoom":"null","addRecession":false,"margins":{"top":"105","bottom":"80","left":"55","right":"40"},"xAxis":{"title":"","tickInterval":"1"},"yAxis":{"title":"Percent","titleIndent":"23","autoInterval":true,"yAxisIsLog":false,"signs":"noSigns","tickInterval":"10","forcedDecimal":"yDecimalNoForce","divide":"1"},"legend":{"layout":"horizontal","x":"10","y":"40","legendIsReversed":false},"tooltip":{"isShared":false,"forcedDecimal":"0","signs":"%","multiple":"1"},"credits":{"text":"Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.","yPos":"-20"},"fromTableChecked":true,"fromTable":{"loadFrom":"rowsSelected","data":"<table id=\"BLS_table\" class=\"regular\" cellspacing=\"0\" cellpadding=\"0\" xborder=\"1\" style=\"width: 95%\"><caption><span class=\"tableTitle\">Percentage of private industry workers with access to retirement benefits, March 2014</span></caption><thead><tr><th rowspan=\"1\" id=\"columnHead0\" style=\"vertical-align: middle;\">Wage percentile</th><th id=\"columnHead1\">All retirement benefits</th><th id=\"columnHead2\">Defined benefit</th><th id=\"columnHead3\">Defined contribution</th></tr></thead><tbody><tr><th id=\"rowHead0\"><p>Lowest 10 percent</p></th><td headers=\"rowHead0 columnHead1\">27</td><td headers=\"rowHead0 columnHead2\">4</td><td headers=\"rowHead0 columnHead3\">25</td></tr><tr class=\"greenbar\"><th id=\"rowHead1\"><p>Lowest 25 percent</p></th><td headers=\"rowHead1 columnHead1\">38</td><td headers=\"rowHead1 columnHead2\">5</td><td headers=\"rowHead1 columnHead3\">36</td></tr><tr><th id=\"rowHead2\"><p>Second 25 percent (median)</p></th><td headers=\"rowHead2 columnHead1\">67</td><td headers=\"rowHead2 columnHead2\">14</td><td headers=\"rowHead2 columnHead3\">62</td></tr><tr class=\"greenbar\"><th id=\"rowHead3\"><p>Third 25 percent</p></th><td headers=\"rowHead3 columnHead1\">76</td><td headers=\"rowHead3 columnHead2\">24</td><td headers=\"rowHead3 columnHead3\">70</td></tr><tr><th id=\"rowHead4\"><p>Highest 25 percent</p></th><td headers=\"rowHead4 columnHead1\">85</td><td headers=\"rowHead4 columnHead2\">36</td><td headers=\"rowHead4 columnHead3\">80</td></tr><tr class=\"greenbar\"><th id=\"rowHead5\"><p>Highest 10 percent</p></th><td headers=\"rowHead5 columnHead1\">88</td><td headers=\"rowHead5 columnHead2\">37</td><td headers=\"rowHead5 columnHead3\">85</td></tr></tbody></table>","colorRow":1},"fromManual":{"title":"Title Goes Here","subTitle":"","xCategories":"\"Dec 2012\",\"Jan 2013\",\"Feb 2013\",\"Mar 2013\",\"Apr 2013\",\"May 2013\",\"Jun 2013\",\"Jul 2013\",\"Aug 2013\",\"Sep 2013\",\"Oct 2013\",\"Nov 2013\",\"Dec 2013\",\"Jan 2014\"","seriesInfo":[{"title":"Series 1","data":"40,23,13,15,18,40,45,32,10,20,5,10,40,40","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(47, 126, 216)"},{"title":"Series 2","data":"40,40,40,23,13,32,10,20,5,10,15,18,40,45","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(176, 76, 76)"},{"title":"Series 3","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 4","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(145, 0, 0)"},{"title":"Series 5","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(26, 173, 206)"},{"title":"Series 6","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(73, 41, 112)"},{"title":"Series 7","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(242, 143, 67)"},{"title":"Series 8","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(119, 161, 229)"},{"title":"Series 9","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(196, 37, 37)"},{"title":"Series 10","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(166, 201, 106)"}]},"histogram":{"chartTitle":"Title Goes Here","subTitle":"","histogramNumberOfColumns":"5","histogramSeriesTitle":"Series","histogramSeriesData":"40,23,13,15,18,40,45,32,10,20,5,10,41,40","color":"rgb(47, 126, 216)"},"bubble":{"chartTitle":"Title Goes Here","chartSubTitle":"Bubble size represents... ","bubbleMaxSize":"50","bubbleSizeText":"","seriesInfo":[{"title":"Series 1","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 2","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"}]}}
+
+ 
+
+ 
+
+ */
+
+
+
+                            });

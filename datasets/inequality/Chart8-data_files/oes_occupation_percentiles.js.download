@@ -1,0 +1,685 @@
+$(document).ready(function(){
+
+        ///////add commas function
+
+        function addCommas(val) {
+            if ((val > 999) || (val < -999)) {
+                while (/(\d+)(\d{3})/.test(val.toString())) {
+                    val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                }
+            }
+            return val;
+        }
+
+        var chart0_chart = new Highcharts.Chart({
+
+                chart: {
+
+                    renderTo: "chart_oes_occupations_percentiles",
+
+                    spacingLeft: 20,
+
+                    spacingRight: 0,
+
+                    // margin: [110, 60, 70, 70], //[top, right, bottom, left], the higher the number the more pushed in
+
+                    marginBottom: 80,
+
+                    marginTop: 80,
+
+                    marginLeft: 255,
+
+                    marginRight: 30,
+
+                    borderColor: 'white',
+
+                    plotBorderColor: 'none',
+
+                    plotBorderWidth: 1,
+
+                    defaultSeriesType: 'bar', //line, bar, etc...
+
+                    zoomType: null,
+
+                    alignTicks: false,
+
+                    inverted: false,
+
+                    ignoreHiddenSeries: true
+
+                },
+
+                title: {
+
+                    text: "Percentiles of annual wages for selected occupations, May 2014",
+
+                    align: 'left',
+
+                    margin: 20,
+
+                    x: 0,
+
+                    width: '540px',
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'sans-serif',
+
+                        fontWeight: 'bold',
+
+                        fontSize: '14px'
+
+                    }
+
+                },
+
+                subtitle: {
+
+                    text: "",
+
+                    align: 'left',
+
+                    x: 0,
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'sans-serif',
+
+                        fontWeight: 'normal',
+
+                        backgroundColor: '#fff',
+
+                        fontSize: '12px'
+
+                    }
+
+                },
+
+                ///////series data//////////////////        
+
+                series: [{"name":"10th percentile, all occupations","visible":true,"color":"rgb(1, 1, 123)","dashStyle":"Dash","type":"line","lineWidth":1.5,"marker":{"enabled":false},"data":[18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350,18350]},{"name":"50th percentile (median), all occupations","visible":true,"color":"rgb(255, 80, 80)","dashStyle":"Dash","type":"line","lineWidth":1.5,"marker":{"enabled":false},"data":[35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540,35540]},{"name":"90th percentile, all occupations","visible":true,"color":"rgb(98,184,98)","dashStyle":"Dash","type":"line","lineWidth":1.5,"marker":{"enabled":false},"data":[90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060,90060]},{"name":"10th percentile","visible":true,"color":"rgb(1, 1, 123)","dashStyle":"Solid","type":"line","lineWidth":0,"marker":{"enabled":true},"data":[89320,52150,60440,68830,50300,52530,50990,56800,52570,33790,28210,36450,30280,28630,22130,23140,21540,25640,32770,21190,18110,17470,16470,16320],"_symbolIndex":2},{"name":"50th percentile (median)","visible":true,"color":"rgb(255, 80, 80)","dashStyle":"Solid","type":"line","lineWidth":0,"marker":{"enabled":true},"data":[120950,104920,102780,95350,88890,87590,85630,82390,82050,63490,61450,54390,48350,47680,45970,41610,40990,40820,38090,37580,34980,23210,18730,18450],"_symbolIndex":2},{"name":"90th percentile","visible":true,"color":"rgb(98,184,98)","dashStyle":"Solid","type":"line","lineWidth":0,"marker":{"enabled":true},"data":[150550,153960,183590,131050,140460,157390,150250,116090,128110,112680,182470,84130,77830,94780,81450,73720,105270,74750,45560,62840,67560,37470,31930,23990],"_symbolIndex":2}],
+
+                ///////////////x axis/////////////////////
+
+                xAxis: {
+
+                    title: {
+
+                        text: '',
+
+                        margin: 6,
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '13px'
+
+                        }
+
+                    },
+
+                    tickInterval: null,
+
+                    tickmarkPlacement: 'on',
+
+                    tickPosition: 'outside',
+
+                    tickColor: '#C0D0E0',
+
+                    lineWidth: 1.2,
+
+                    lineColor: 'gray',
+
+                    labels: {
+
+                        //   formatter: function() {return Highcharts.numberFormat(this.value,0)},
+
+                        formatter: function() {
+
+                            var hideMonths = false;
+
+                            if (hideMonths == true) {
+
+                                return this.value.replace(/\D+/g, '');
+
+                            } else {
+
+                                return this.value;
+
+                            }
+
+                        },
+
+                        rotation: 0,
+
+                        //    overflow: 'justify',
+
+                        // x: -2,
+
+                        //   y: 18,
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '12px'
+
+                        }
+
+                    },
+
+                    plotBands: [],
+
+                    categories: ["Pharmacists","Political scientists","Human resources managers","Nurse practitioners","Information security analysts","Veterinarians","Construction managers","Physical therapists","Civil engineers","Web developers","Broadcast news analysts","Elementary and middle school teachers","Paralegals and legal assistants","Lodging managers","Firefighters","Chefs and head cooks","Real estate sales agents","Carpenters","Transportation security screeners","Automotive technicians and repairers","Fitness trainers and aerobics instructors","Taxi drivers and chauffeurs","Waiters and waitresses","Fast food and counter workers"]
+
+                },
+
+                //end xaxis
+
+                //////////// Y AXIS ////////////////////////////////////
+
+                yAxis: [
+
+                    {
+                        title: {
+
+                            text: '',
+
+                            align: 'high',
+
+                            offset: 0,
+
+                            rotation: 0,
+
+                            y: -15,
+
+                            x: 35,
+
+                            style: {
+
+                                color: '#000000',
+
+                                fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                fontWeight: 'normal',
+
+                                backgroundColor: '#fff',
+
+                                fontSize: '13px'
+
+                            }
+
+                        },
+
+                        type: 'linear',
+
+                        labels: {
+
+                            formatter: function() {
+
+                                ///////if butterfly chart ///////////////////////////
+
+                                if (false == true) {
+
+                                    if (this.value > 0) { ///don't show positive values on this y axis for butterfly charts
+
+                                        return "";
+
+                                    } else {
+
+                                        return Math.abs(this.value);
+
+                                    }
+
+                                    /////////end if butterfly chart///////////
+
+                                    ///ALL Other types of charts , show all values at specified decimal and divisor ////////////////////////
+
+                                } else {
+
+                                    if (false == true) { // if forced decimals chosen
+
+                                        var val = ' '.replace(' ', '') + Highcharts.numberFormat(this.value / 1, 0) + '';
+                                        val = val.replace("$-", "-$");
+                                        return val;
+
+                                    } else {
+
+                                        var val = '$'.replace(' ', '') + addCommas(this.value / 1) + '';
+                                        val = val.replace("$-", "-$");
+                                        return val;
+                                    }
+
+                                }
+
+                                /// end y axis formatter
+
+                            },
+
+                            style: {
+
+                                color: '#000000',
+
+                                fontWeight: 'normal',
+
+                                backgroundColor: '#fff',
+
+                                fontSize: '12px',
+
+                                fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                            }
+
+                        },
+
+                        tickInterval: 50000,
+
+                        tickWidth: 1,
+
+                        lineWidth: 1,
+
+                        lineColor: 'gray',
+
+                        gridLineColor: '#c0c0c0',
+
+                        gridLineWidth: 1.0,
+
+                        gridLineDashStyle: 'Dot',
+
+                        min: null,
+
+                        max: null,
+
+                        plotLines: [{"value":0,"color":"#c0c0c0","dashStyle":"solid","width":1}]
+
+                    },
+
+                    ///second y axis (for recession or butterfly)!
+
+                    {"max":20,"labels":{formatter: function() {if (this.value < 0){return "";}else{return Math.abs(this.value);}},"style":{"color":"#fff"}},"lineWidth":0,"gridLineWidth":0,"plotLines":null,"title":{"text":""},"linkedTo":0,"opposite":true,"index":1}
+
+                    //end second y axis
+
+                ],
+
+                ////////////////////LEGEND////////////////////
+
+                legend: {
+
+                    layout: 'horizontal',
+
+                    //make vertical or horizontal
+
+                    useHTML: true,
+
+                    enabled: true,
+
+                    backgroundColor: 'none',
+
+                    borderWidth: 0,
+
+                    borderColor: 'none',
+
+                    shadow: false,
+
+                    align: 'center',
+
+                    //alignment of legend items
+
+                    verticalAlign: 'top',
+					
+				
+					
+					itemMarginTop: 3,
+
+                    x: 5,
+
+                    //Higher number moves legend right
+
+                    y: 20,
+
+                    //Higher number moves legend down
+
+                  width: 620,
+
+                    //small widths will cause horizontal layouts to stack
+
+                    floating: false,
+
+                    //true makes legend independent of chart objects
+
+                    reversed: false,
+
+                    //reverses legend item order - handy to line up with column order
+
+                    //  itemWidth: 195,
+
+                    // symbolWidth: 30,
+
+                    itemStyle: { //Three legend item styles for active, hover, and deselected - setting these specifically fixes browser differences
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        lineHeight: 1.2,
+
+                        color: '#000080'
+
+                    },
+
+                    itemHiddenStyle: {
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        color: 'gray',
+
+                        lineHeight: 1.2
+
+                    },
+
+                    itemHoverStyle: {
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        lineHeight: 1.2
+
+                        //    ,cursor: "default"  ///un note when legend click is disabled
+
+                    }
+
+                },
+
+                ///////////////////////TOOLTIP///////////////////// (making from manual entry)
+
+                tooltip: {
+
+                    backgroundColor: '#FCFFC5',
+
+                    useHTML: true,
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                    },
+
+                    //tooltip is what shows on hover
+
+                    formatter: function() {
+
+                        ///function to add absolute value for butterfly charts
+
+                        var makeAbsoluteIfButterfly = function(val) {
+
+                            if (false == true) { //if Butterfly == true?
+
+                                return Math.abs(val);
+
+                            } else {
+
+                                return val;
+
+                            }
+
+                        }
+
+                        //function to add dollarsigns if needed, and correctly do it for neg values
+
+                        var negDollarFormat = function(val) {
+
+                            if (true == true) { //if using dollars == true
+
+                                ///convert to number again
+
+                                val = Number(val.replace(/,/g, ""));
+
+                                if (val >= 0) {
+
+                                    return "$" + Highcharts.numberFormat(val, 0);
+
+                                } else {
+
+                                    return "-$" + Highcharts.numberFormat(Math.abs(val), 0);
+
+                                }
+
+                            } else { ///not using dollars
+
+                                return val;
+
+                            }
+
+                        }
+
+
+if (this.series.name.match("all occupations")){
+	var s = '<b>' + this.series.name + '<br>' + negDollarFormat(Highcharts.numberFormat(this.y, 0)) + '' + '</b>';
+}else{
+                   
+                                var s = '<b>' + this.series.name + '</b><br>' + this.x + ": <b>" + negDollarFormat(Highcharts.numberFormat(this.y, 0)) + '' + '</b>';
+}
+
+                        return s;
+
+                    },
+
+                    shared: false
+
+                },
+
+                /////////////////PLOT OPTIONS///////////////////
+
+                plotOptions: {
+
+                    series: {
+
+                        /* un note to turn off legend click - remember to change cursor to "default" in legend properties
+
+                                                                events: {
+
+            legendItemClick: function () {
+
+                return false; 
+
+            }
+
+                                                                },
+
+                                                */
+
+                        dataLabels: {
+
+                            enabled: false
+
+                        },
+
+                        pointPadding: 0.1, //padding between points in bar charts  (0 is tight)1 is loose
+
+                        groupPadding: 0.2, // padding between groups in bar charts (0 is tight)1 is loose
+
+                        maxSize: 50, //for bubble sizes
+
+                        sizeBy: 'width', //for bubble sizing, instead of 'area'
+
+                        pointPlacement: null,
+
+                        stacking: null,
+
+                        borderWidth: 0,
+
+                        shadow: false,
+
+                        animation: true
+
+                    },
+
+                    line: {
+
+                        lineWidth: 1.5,
+
+                        states: {
+
+                            hover: {
+
+                                lineWidth: 4
+
+                            }
+
+                        },
+
+                        marker: {
+
+                            enabled: true,
+
+                            //status of tick symbols
+
+                            states: {
+
+                                hover: {
+
+                                    enabled: true,
+
+                                    radius: 5
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                },
+
+                credits: {
+
+                    text: "Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.",
+
+                    position: {
+
+                        align: 'left',
+
+                        x: 10,
+
+                        y: -40
+
+                    },
+
+                    style: {
+
+                        cursor: "default",
+                        color: "#2C2C2C"
+
+                    },
+
+                    href: ""
+
+                },
+
+                exporting: {
+
+                    buttons: {
+
+                        contextButton: {
+
+                            enabled: true,
+
+                            verticalAlign: 'bottom',
+
+                            x: -10
+
+                        }
+
+                    }
+
+                }
+
+            }, function() {
+
+                //                            * Callback function for setting a lower opacity for other series than the one that is hovered in the legend
+                var grayOtherSeries = function(isReversed, chartDiv) {
+
+                                                                                                var thisChart = $("#"+chartDiv);
+                                                                                                
+                        if (isReversed) {
+                            var mod = $(".highcharts-legend:eq(0) .highcharts-legend-item", thisChart).length -1;
+                            if (mod <= 0) {
+                                mod = 1;
+                            }
+                        }
+
+                        $(".highcharts-legend-item", thisChart).unbind("hover");
+
+                        var thisSeriesIndex = 0;
+
+                        $(".highcharts-legend-item", thisChart).hover(function() {
+
+                            if (isReversed) {
+                                thisSeriesIndex = mod - $(this).index();
+
+                            } else {
+                                thisSeriesIndex = $(this).index();
+                            }
+
+                            $(".highcharts-series", thisChart).each(function(index, element) {
+
+                                if (index != thisSeriesIndex) {
+                                    $(this).attr("opacity", 0.10);
+                                }
+                            });
+                                                                                                                
+                                                                                                                $(".highcharts-markers", thisChart).each(function(index, element) {
+
+                                if (index != thisSeriesIndex) {
+                                    $(this).attr("opacity", 0.10);
+                                }
+                            });
+                                                                                                                
+
+                        }, function() {
+                            $(".highcharts-series, .highcharts-markers", thisChart).each(function(index, element) {
+                                $(this).attr("opacity", 1.0);
+                            });
+                                                                                                                
+                                                                                                                
+                        });
+                    } //end grayOtherSeries(Bool)
+
+                grayOtherSeries(false, "chart0"); ///true is legend is reversed.
+
+            }
+
+        );
+
+        window.chart0_chart = chart0_chart;
+
+        /* Saved chart information - paste everything between the note lines into chartmaker to load chart
+
+
+
+{"chartType":"column","dataLabelsEnabled":false,"isStacked":false,"chartPointPadding":0.1,"chartGroupPadding":0.2,"chartWidth":"600","chartHeight":"600","chartID":"chart0","useMLRStyles":false,"chartIsInverted":false,"chartIsZoom":"null","addRecession":false,"margins":{"top":"110","bottom":"170","left":"75","right":"40"},"xAxis":{"title":"","tickInterval":"1","autoInterval":true},"yAxis":{"title":"Y-axis title","titleIndent":"35","minVal":"","maxVal":"","autoInterval":true,"yAxisIsLog":false,"signs":"noSigns","tickInterval":"10","forcedDecimal":"yDecimalNoForce","divide":"1"},"legend":{"layout":"vertical","x":"0","y":"30","legendIsReversed":false},"tooltip":{"isShared":false,"forcedDecimal":"0","signs":"noSigns","multiple":"1"},"credits":{"text":"Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.","yPos":"-20"},"fromTableChecked":false,"fromTable":{"loadFrom":"rowsSelected","data":" ","colorRow":-1},"fromManual":{"title":"Wage percentiles by major occupational group, May 2014","subTitle":"","xCategories":"\"Management\",\"Computer and mathematical\",\"Legal\",\"Architecture and engineering\",\"Business and financial operations\",\"Healthcare practitioners and technical\",\"Life, physical, and social science\",\"Education, training, and library\",\"Arts, design, entertainment, sports, and media\",\"Installation, maintenance, and repair\",\"Construction and extraction\",\"Community and social service\",\"Protective service\",\"Office and administrative support\",\"Production\",\"Transportation and material moving\",\"Healthcare support\",\"Sales and related\",\"Building and grounds cleaning and maintenance\",\"Personal care and service\",\"Farming, fishing, and forestry\",\"Food preparation and serving related\"","seriesInfo":[{"title":"Annual 90th percentile wage","data":"187200,134500,187200,128780,116380,133600,117810,88190,99000,72560,76860,73250,80360,56460,57930,57440,42690,75280,40560,38440,40450,31440","seriesType":"scatter","lineStyle":"Solid","isVisible":true,"color":"rgb(190, 190, 190)"},{"title":"Annual 75th percentile wage","data":" ","minData":"67080,56920,49790,56060,47880,43920,43490,30940,29450,30980,31000,31190,24510,24650,23630,21330,21480,19070,18970,18250,18330,17630","maxData":"141150,106330,133430,100910,87700,87840,88040,65220,68680,57060,58310,56290,57270,43410,43320,41530,33730,44020,30700,27580,28520,23660","seriesType":"columnrange","lineStyle":"Solid","isVisible":true,"color":"rgb(221, 177, 57)"},{"title":"Annual 50th percentile wage (median)","data":"97230,79420,76860,75780,64790,61710,61450,46660,45180,42110,41380,41290,37180,32520,31720,29530,26440,25360,23270,21260,20250,19130","seriesType":"scatter","lineStyle":"Solid","isVisible":true,"color":"rgb(210, 35, 42)"},{"title":"Annual 25th percentile wage","data":"","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(175, 210, 255)"},{"title":"Annual 10th percentile wage","data":"46440,41130,35840,41630,36010,31570,32170,21040,20200,23220,24430,23990,19090,19480,19180,18120,18480,17340,17200,16840,17370,16580","seriesType":"scatter","lineStyle":"Solid","isVisible":true,"color":"rgb(15, 5, 165)"},{"title":" ","data":" ","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(73, 41, 112)"},{"title":" ","data":" ","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(242, 143, 67)"},{"title":" ","data":" ","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(119, 161, 229)"},{"title":" ","data":" ","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(196, 37, 37)"},{"title":" ","data":" ","seriesType":"column","lineStyle":"Solid","isVisible":true,"color":"rgb(166, 201, 106)"}]},"histogram":{"chartTitle":"Title Goes Here","subTitle":"","histogramNumberOfColumns":"5","histogramSeriesTitle":"Series","histogramSeriesData":"40,23,13,15,18,40,45,32,10,20,5,10,41,40","color":"rgb(47, 126, 216)"},"bubble":{"chartTitle":"Title Goes Here","chartSubTitle":"Bubble size represents... ","bubbleMaxSize":"50","bubbleSizeText":"","seriesInfo":[{"title":"Series 1","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 2","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"}]}}
+
+
+
+*/
+
+    }
+);

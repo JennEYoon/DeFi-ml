@@ -1,0 +1,865 @@
+$(document).ready(function(){
+
+
+
+             ///////add commas function
+
+            function addCommas(val) {
+				if (val>999){
+					while (/(\d+)(\d{3})/.test(val.toString())) {
+						val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+					}
+				}
+                return val;
+           }
+
+
+
+
+
+            /**
+
+             * Highcharts plugin for setting a lower opacity for other series than the one that is hovered
+
+             * in the legend
+
+             */
+
+            (function (Highcharts) {
+
+                var each = Highcharts.each;
+
+
+
+                Highcharts.wrap(Highcharts.Legend.prototype, 'renderItem', function (proceed, item) {
+
+                    proceed.call(this, item);
+
+                    var series = this.chart.series,
+
+                        element = item.legendGroup.element;
+
+                    element.onmouseover = function () {
+
+                        each(series, function (seriesItem) {
+
+                            if (seriesItem !== item) {
+
+                                each(['group', 'markerGroup'], function (group) {
+
+                                    seriesItem[group].attr('opacity', 0.10);
+
+                                });
+
+                            }
+
+                        });
+
+                    }
+
+                    element.onmouseout = function () {
+
+                        each(series, function (seriesItem) {
+
+                            if (seriesItem !== item) {
+
+                                each(['group', 'markerGroup'], function (group) {
+
+                                    seriesItem[group].attr('opacity', 1);
+
+                                });
+
+                            }
+
+                        });
+
+                    }
+
+
+
+                });
+
+            }(Highcharts));
+
+            ///end gray out plugin
+
+
+
+
+
+
+
+
+
+
+
+            var chart_atus_percent_chart = new Highcharts.Chart({
+
+                    chart: {
+
+                        renderTo: "chart_atus_percent",
+
+                        spacingLeft: 20,
+
+                        spacingRight: 0,
+
+                        // margin: [110, 60, 70, 70], //[top, right, bottom, left], the higher the number the more pushed in
+
+                        marginBottom: 80,
+
+                        marginTop: 60,
+
+                        marginLeft: 265,
+
+                        marginRight: 30,
+
+                        borderColor: 'white',
+
+                        plotBorderColor: 'none',
+
+                        plotBorderWidth: 1,
+
+                        defaultSeriesType: 'bar', //line, bar, etc...
+
+                        zoomType: null,
+
+                        alignTicks: false,
+						
+						inverted: false
+
+                    },
+
+                    title: {
+
+                        text: "Time use among full-time wage and salary workers: percent of workers in each earnings group doing activity on an average day in 2013",
+
+                        align: 'left',
+
+                        margin: 20,
+
+                        x: 0,
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'sans-serif',
+
+                            fontWeight: 'bold',
+
+                            width: '540px',
+
+                            fontSize: '14px'
+
+
+
+                        }
+
+                    },
+
+
+
+                    subtitle: {
+
+                        text: "",
+
+                        align: 'left',
+
+                        x: 0,
+
+
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'sans-serif',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '12px'
+
+
+
+                        }
+
+                    },
+
+                    ///////series data//////////////////        
+
+                    series: [{"name":"Lowest 25 percent","visible":true,"color":"rgb(15, 5, 165)","dashStyle":"Solid","type":"bar","lineWidth":1.5,"marker":{},"data":[94.8,94.2,94.5,32.6,89.5,75.3,12.8,70.7,71.7,28.2,51.5,38.6,14.5,28.9,13.2,12.1,6.5,2.7]},{"name":"Second 25 percent","visible":true,"color":"rgb(175, 210, 255)","dashStyle":"Solid","type":"bar","lineWidth":1.5,"marker":{},"data":[95.4,93.3,93.3,39.7,88.4,76.3,12.4,67.4,75.5,30.2,55,42.4,14,26,15.4,10.6,7.5,4.1]},{"name":"Third 25 percent","visible":true,"color":"rgb(210, 35, 42)","dashStyle":"Solid","type":"bar","lineWidth":1.5,"marker":{},"data":[96.5,93.9,92.4,37.1,87.4,77.6,16.4,69.5,77.3,27.3,54.8,42.2,15,29,16.4,8.2,7.5,3.9]},{"name":"Highest 25 percent","visible":true,"color":"rgb(221, 177, 57)","dashStyle":"Solid","type":"bar","lineWidth":1.5,"marker":{},"data":[97.5,93.9,92.1,32.5,87.4,72.9,21.2,74.3,72.2,26.2,48.8,39.4,11.5,31.6,27.4,7.5,5.8,5.5]}],
+
+                    ///////////////x axis/////////////////////
+
+                    xAxis: {
+
+                        title: {
+
+                            text: '',
+
+                            margin: 6,
+
+
+
+                            style: {
+
+                                color: '#000000',
+
+                                fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                fontWeight: 'normal',
+
+                                backgroundColor: '#fff',
+
+                                fontSize: '13px'
+
+                            }
+
+                        },
+
+                        tickInterval: 1,
+
+                        //	tickmarkPlacement: 'on',
+
+
+
+                        tickPosition: 'outside',
+
+                        lineWidth: 1.2,
+
+                        lineColor: 'gray',
+
+
+
+                        labels: {
+
+                            //   formatter: function() {return Highcharts.numberFormat(this.value,0)},
+
+
+
+                            formatter: function () {
+
+                                var hideMonths = false;
+
+                                if (hideMonths == true) {
+
+                                    return this.value.replace(/\D+/g, '');
+
+                                } else {
+
+                                    return this.value;
+
+                                }
+
+                            },
+
+                            rotation: 0,
+
+                            //	overflow: 'justify',
+
+                            // x: -2,
+
+                            //   y: 18,
+
+                            style: {
+
+                                color: '#000000',
+
+                                fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                fontWeight: 'normal',
+
+                                backgroundColor: '#fff',
+
+                                fontSize: '12px'
+
+                            }
+
+                        },
+
+                        plotBands: [],
+
+
+
+                        categories: ["Eating and drinking","Traveling","Socializing, relaxing, and leisure, total","Socializing and communicating","Relaxing and leisure","Watching TV","Reading for personal interest","Work and work-related activities","Household activities, total","Housework","Food preparation and clean-up","Consumer goods purchases, total","Grocery shopping","Caring for and helping household members","Participating in sports, exercise, and recreation","Caring for and helping non-household members","Religious and spiritual activities","Volunteer activities"]
+
+                    },
+
+                    //end xaxis
+
+
+
+                    //////////// Y AXIS ////////////////////////////////////
+
+
+
+                    yAxis: [{
+
+                            type: 'linear',
+
+                            labels: {
+
+
+
+                                formatter: function () {
+
+                                    ///////if butterfly chart ///////////////////////////
+
+                                    if (false == true) {
+
+                                        if (this.value > 0) { ///don't show positive values on this y axis for butterfly charts
+
+                                            return "";
+
+                                        } else {
+
+                                            return Math.abs(this.value);
+
+                                        }
+
+                                        /////////end if butterfly chart///////////
+
+
+
+
+
+                                        ///ALL Other types of charts , show all values at specified decimal and divisor ////////////////////////
+
+                                    } else {
+
+
+
+                                        if (false == true) { // if forced decimals chosen
+
+                                            return Highcharts.numberFormat(this.value / 1, 0)
+
+                                        } else {
+
+                                            return addCommas(this.value / 1);
+
+                                        }
+
+
+
+                                    }
+
+                                    /// end y axis formatter
+
+
+
+                                },
+
+                                style: {
+
+                                    color: '#000000',
+
+                                    fontWeight: 'normal',
+
+                                    backgroundColor: '#fff',
+
+                                    fontSize: '12px',
+
+                                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                                }
+
+
+
+                            },
+
+
+
+                            tickInterval: 20,
+
+                            tickWidth: 1,
+
+                            lineWidth: 1,
+
+                            lineColor: 'gray',
+
+                            gridLineColor: '#c0c0c0',
+
+                            gridLineWidth: 1.0,
+
+                            gridLineDashStyle: 'Dot',
+
+                            min: 0,
+
+                            max: 100,
+
+                            plotLines: [{"value":0,"color":"#c0c0c0","dashStyle":"solid","width":1}],
+
+
+
+                            title: {
+
+                                align: 'middle',
+
+                                offset: 20,
+
+                                text: 'Percent',
+
+                                rotation: 0,
+
+                                y: -15,
+
+                                x: 35,
+
+
+
+                                style: {
+
+                                    color: '#000000',
+
+                                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                                    fontWeight: 'normal',
+
+                                    backgroundColor: '#fff',
+
+                                    fontSize: '13px'
+
+                                }
+
+                            }
+
+
+
+
+
+   },
+
+  ///second y axis (for recession or butterfly)
+
+
+
+  {"max":20,"labels":{formatter: function() {if (this.value < 0){return "";}else{return Math.abs(this.value);}},"style":{"color":"#fff"}},"lineWidth":0,"gridLineWidth":0,"plotLines":null,"title":{"text":""},"linkedTo":0,"opposite":true,"index":1}
+
+  //end second y axis
+
+   ],
+
+
+
+                    ////////////////////LEGEND////////////////////
+
+
+
+                    legend: {
+
+                        layout: 'vertical',
+
+                        //make vertical or horizontal
+
+                        enabled: true,
+
+                        backgroundColor: 'none',
+
+                        borderWidth: 0,
+
+                        borderColor: 'none',
+
+                        shadow: false,
+
+                        align: 'center',
+
+                        //alignment of legend items
+
+                        verticalAlign: 'top',
+
+                        x: 180,
+
+                        //Higher number moves legend right
+
+                        y: 380,
+
+                        //Higher number moves legend down
+
+                        // width: 590,
+
+                        //small widths will cause horizontal layouts to stack
+
+                        floating: false,
+
+                        //true makes legend independent of chart objects
+
+                        reversed: true,
+
+                        //reverses legend item order - handy to line up with column order
+
+                        //  itemWidth: 195,
+
+                        // symbolWidth: 30,
+
+
+
+
+
+                        itemStyle: { //Three legend item styles for active, hover, and deselected - setting these specifically fixes browser differences
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            lineHeight: 1.2,
+
+                            color: '#000080'
+
+                        },
+
+                        itemHiddenStyle: {
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            color: 'gray',
+
+                            lineHeight: 1.2
+
+                        },
+
+                        itemHoverStyle: {
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            lineHeight: 1.2
+
+                            //	,cursor: "default"  ///un note when legend click is disabled
+
+                        }
+
+                    },
+
+
+
+                    ///////////////////////TOOLTIP///////////////////// (making from manual entry)
+
+                    tooltip: {
+
+                        backgroundColor: '#FCFFC5',
+
+                        useHTML: true,
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                        },
+
+                        //tooltip is what shows on hover
+
+                        formatter: function () {
+
+
+
+                            ///function to add absolute value for butterfly charts
+
+                            var makeAbsoluteIfButterfly = function (val) {
+
+                                if (false == true) { //if Butterfly == true?
+
+                                    return Math.abs(val);
+
+                                } else {
+
+                                    return val;
+
+                                }
+
+                            }
+
+
+
+
+
+                            //function to add dollarsigns if needed, and correctly do it for neg values
+
+                            var negDollarFormat = function (val) {
+
+                                if (false == true) { //if using dollars == true
+
+                                    ///convert to number again
+
+                                    val = Number(val.replace(/,/g, ""));
+
+                                    if (val >= 0) {
+
+                                        return "$" + Highcharts.numberFormat(val, 1);
+
+                                    } else {
+
+                                        return "-$" + Highcharts.numberFormat(Highcharts.numberFormat(Math.abs(val), 1), 1);
+
+                                    }
+
+                                } else { ///not using dollars
+
+                                    return val;
+
+                                }
+
+                            }
+
+
+
+                            if ('bar' == "bubble" && this.series.xAxis.axisTitle && this.series.yAxis.axisTitle) {
+
+                                var s = this.series.name + "<br>" + this.series.xAxis.axisTitle.text + ": <b>" + negDollarFormat(Highcharts.numberFormat(this.x * 1, 1)) + "</b><br>" + this.series.yAxis.axisTitle.text + ": <b>" + negDollarFormat(Highcharts.numberFormat(this.y * 1, 1)) + "</b><br>" + "" + ": <b>" + this.point.z + "</b>";
+
+                        /////////////////////for single tooltip not bubble////////////////////////////////////////////////////////////////// 	
+
+                            } else if (false == false) {
+								if (this.point.high){ ///for ranges
+									 var s = '<b>' + this.series.name + '</b><br>' + this.x + "<br>High: <b>" + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.high * 1), 1)) + '%' + '</b>'+ "<br>Low: <b>" + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.low * 1), 1)) + '%' + '</b>';
+							
+								}else{///for not ranges
+                              		  var s = '<b>' + this.series.name + '</b><br>' + this.x + ": <b>" + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.y * 1), 1)) + '%' + '</b>';
+								}
+								
+                            } else { //////////////////////for shared tooltip ////////////////////////////////////////////////////////////////////////
+
+                                var s = '<b>' + this.x + '</b>';
+
+                                $.each(this.points, function (i, point) {
+										if (this.point.high){ ///for ranges
+											 s += '<br/><span style="color: ' + point.series.color + '">' + point.series.name + '</span><br>High: <b>' + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.high * 1), 1)) + '%' + '</b><br>Low: <b>' + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.low * 1), 1)) + '%' + '</b>';
+										}else{ ///not ranges
+                                    s += '<br/><span style="color: ' + point.series.color + '">' + point.series.name + '</span>: <b>' + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(point.y * 1), 1)) + '%' + '</b>';
+										}
+
+
+
+                                });
+
+
+
+
+
+                            }
+
+                            return s;
+
+                        },
+
+                        shared: false
+
+
+
+                    },
+
+
+
+
+
+
+
+
+
+
+
+                    /////////////////PLOT OPTIONS///////////////////
+
+                    plotOptions: {
+
+                        series: {
+
+
+
+
+                            /* un note to turn off legend click - remember to change cursor to "default" in legend properties
+
+				events: {
+
+            legendItemClick: function () {
+
+                return false; 
+
+            }
+
+				},
+
+			*/
+
+                            dataLabels: {
+
+                                enabled: false
+
+                            },
+
+                            pointPadding: 0.1, //padding between points in bar charts  (0 is tight)1 is loose
+
+                            groupPadding: 0.2, // padding between groups in bar charts (0 is tight)1 is loose
+
+                            maxSize: 50, //for bubble sizes
+
+                            sizeBy: 'width', //for bubble sizing, instead of 'area'
+
+                            pointPlacement: null,
+
+                            stacking: null,
+
+                            borderWidth: 0,
+
+
+
+                            shadow: false,
+
+                            animation: true
+
+                        },
+
+
+
+                        line: {
+
+                            lineWidth: 1.5,
+
+                            states: {
+
+                                hover: {
+
+                                    lineWidth: 4
+
+                                }
+
+                            },
+
+                            marker: {
+
+                                enabled: true,
+
+                                //status of tick symbols
+
+                                states: {
+
+                                    hover: {
+
+                                        enabled: true,
+
+                                        radius: 5
+
+
+
+                                    }
+
+                                }
+
+                            }
+
+
+
+                        }
+
+
+
+
+
+                    },
+
+
+
+
+
+
+
+                    credits: {
+
+                        text: "Note: Earnings data are for full-time wage and salary workers who held only one job.<br>All self-employed workers are excluded.<br>Click legend items to change data display. Hover over chart to view data. <br>Source: U.S. Bureau of Labor Statistics.",
+
+                        position: {
+
+                            align: 'left',
+
+                            x: 10,
+
+                            y: -40
+
+                        },
+
+                        style: {
+
+                            cursor: "default" //color: "black"
+
+
+
+                        },
+
+                        href: ""
+
+                    },
+
+
+
+                    exporting: {
+
+                        buttons: {
+
+                            contextButton: {
+
+
+
+
+
+                                enabled: true,
+
+                                verticalAlign: 'bottom',
+
+                                x: -10
+
+
+
+                            }
+
+
+
+
+
+                        }
+
+                    }
+
+                }
+
+
+
+            );
+
+
+
+            window.chart_atus_percent_chart = chart_atus_percent_chart;
+
+
+
+
+
+
+
+
+
+
+
+            /* Saved chart information - paste this into chartmaker to load chart
+
+
+
+{"chartType":"bar","dataLabelsEnabled":false,"isStacked":false,"chartPointPadding":0.1,"chartGroupPadding":0.2,"chartWidth":"620","chartHeight":"600","chartID":"chart_atus_percent","useMLRStyles":false,"chartIsInverted":false,"chartIsZoom":"null","addRecession":false,"margins":{"top":"60","bottom":"70","left":"265","right":"30"},"xAxis":{"title":"","tickInterval":"1"},"yAxis":{"title":"Percent","titleIndent":"35","autoInterval":false,"yAxisIsLog":false,"tickInterval":"20","forcedDecimal":"yDecimalNoForce","divide":"1"},"legend":{"layout":"vertical","x":"180","y":"380","legendIsReversed":true},"tooltip":{"isShared":false,"forcedDecimal":"1","signs":"%","multiple":"1"},"credits":{"text":"Click legend items to change data display. Hover over chart to view data. \nSource: U.S. Bureau of Labor Statistics.","yPos":"-20"},"fromTableChecked":false,"fromTable":{"loadFrom":"rowsSelected","data":" ","colorRow":1},"fromManual":{"title":"Time use among full-time wage and salary workers: percent of workers doing activity on an average day in 2013, by weekly earnings","subTitle":"","xCategories":"\"Eating and drinking\",\"Traveling\",\"Socializing, relaxing, and leisure, total\",\"Socializing and communicating\",\"Relaxing and leisure\",\"Television and movies\",\"Reading for personal interest\",\"Work and work-related activities\",\"Household activities, total\",\"Housework\",\"Food and drink prep, presentation, and clean-up\",\"Consumer purchases\",\"Grocery shopping\",\"Caring for and helping household members\",\"Sports, exercise, and recreation\",\"Caring for and helping non-household members\",\"Religious and spiritual activities\",\"Volunteer activities\"","seriesInfo":[{"title":"$1,291 and higher","data":"97.5,93.9,92.1,30.8,87.4,72.9,21.2,74.3,72.2,26.2,48.8,39.4,11.5,31.6,28.5,7.5,5.8,5.5","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(221, 177, 57)"},{"title":"$831 to $1,290","data":"96.5,93.9,92.4,35.5,87.4,77.6,16.4,69.5,77.3,27.3,54.8,42.2,15,29,17.4,8.2,7.5,3.9","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(210, 35, 42)"},{"title":"$531 to $830","data":"95.4,93.3,93.3,38.7,88.4,76.3,12.4,67.4,75.5,30.2,55,42.4,14,26,16.6,10.6,7.5,4.1","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(175, 210, 255)"},{"title":"$0 to $530","data":"94.8,94.2,94.5,31.5,89.5,75.3,12.8,70.7,71.7,28.2,51.5,38.6,14.5,28.9,14.1,12.1,6.5,2.7","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(15, 5, 165)"},{"title":" ","data":" ","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(26, 173, 206)"},{"title":" ","data":" ","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(73, 41, 112)"},{"title":" ","data":" ","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(242, 143, 67)"},{"title":" ","data":" ","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(119, 161, 229)"},{"title":" ","data":" ","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(196, 37, 37)"},{"title":" ","data":" ","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(166, 201, 106)"}]},"histogram":{"chartTitle":"Title Goes Here","subTitle":"","histogramNumberOfColumns":"5","histogramSeriesTitle":"Series","histogramSeriesData":"40,23,13,15,18,40,45,32,10,20,5,10,41,40","color":"rgb(47, 126, 216)"},"bubble":{"chartTitle":"Title Goes Here","chartSubTitle":"Bubble size represents... ","bubbleMaxSize":"50","bubbleSizeText":"","seriesInfo":[{"title":"Series 1","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 2","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"}]}}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+);

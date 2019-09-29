@@ -1,0 +1,1073 @@
+$(document).ready(function() {
+
+
+
+    ///////add commas function
+
+    function addCommas(val) {
+        if ((val > 999) || (val < -999)) {
+            while (/(\d+)(\d{3})/.test(val.toString())) {
+                val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+            }
+        }
+        return val;
+    }
+
+
+
+
+    /**
+
+     * Highcharts plugin for setting a lower opacity for other series than the one that is hovered
+
+     * in the legend
+
+     */
+
+    (function(Highcharts) {
+
+        var each = Highcharts.each;
+
+
+
+        Highcharts.wrap(Highcharts.Legend.prototype, 'renderItem', function(proceed, item) {
+
+            proceed.call(this, item);
+
+            var series = this.chart.series,
+
+                element = item.legendGroup.element;
+
+            element.onmouseover = function() {
+
+                each(series, function(seriesItem) {
+
+                    if (seriesItem !== item) {
+
+                        each(['group', 'markerGroup'], function(group) {
+
+                            seriesItem[group].attr('opacity', 0.10);
+
+                        });
+
+                    }
+
+                });
+
+            }
+
+            element.onmouseout = function() {
+
+                each(series, function(seriesItem) {
+
+                    if (seriesItem !== item) {
+
+                        each(['group', 'markerGroup'], function(group) {
+
+                            seriesItem[group].attr('opacity', 1);
+
+                        });
+
+                    }
+
+                });
+
+            }
+
+
+
+        });
+
+    }(Highcharts));
+
+    ///end gray out plugin
+
+
+
+
+    var chart1_chart = new Highcharts.Chart({
+
+            chart: {
+
+                renderTo: "chart1",
+
+                spacingLeft: 20,
+
+                spacingRight: 0,
+
+                // margin: [110, 60, 70, 70], //[top, right, bottom, left], the higher the number the more pushed in
+
+                marginBottom: 64,
+
+                marginTop: 70,
+
+                marginLeft: 60,
+
+                marginRight: 110,
+
+                borderColor: 'white',
+
+                plotBorderColor: 'none',
+
+                plotBorderWidth: 1,
+
+                defaultSeriesType: 'line', //line, bar, etc...
+
+                zoomType: null,
+
+                alignTicks: false,
+
+                inverted: false
+
+            },
+
+            title: {
+
+                text: "Selected percentiles of usual weekly earnings of full-time wage and salary workers age 16 and older, in 2014 dollars, 1979\u20132014",
+
+
+                align: 'left',
+
+                margin: 20,
+
+                x: 0,
+
+                style: {
+
+                    color: '#000000',
+
+                    fontFamily: 'sans-serif',
+
+                    fontWeight: 'bold',
+
+                    width: '540px',
+
+                    fontSize: '14px'
+
+
+
+                }
+
+            },
+
+
+
+            subtitle: {
+
+                text: "",
+
+                align: 'left',
+
+                x: 0,
+
+
+
+                style: {
+
+                    color: '#000000',
+
+                    fontFamily: 'sans-serif',
+
+                    fontWeight: 'normal',
+
+                    backgroundColor: '#fff',
+
+                    fontSize: '12px'
+
+
+
+                }
+
+            },
+
+            ///////series data//////////////////        
+
+            series: [
+			
+			{
+                "name": "Total, 90th ",
+                "visible": true,
+                "color": "rgb(255, 39, 0)",
+                "dashStyle": "Solid",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [1422,1374,1360,1398,1397,1432,1459,1495,1520,1527,1508,1516,1529,1540,1576,1572,1577,1590,1631,1674,1720,1732,1795,1811,1826,1830,1825,1813,1829,1860,1925,1921,1897,1933,1922,1898],
+                "_symbolIndex": 4
+            },
+			{
+                "name": "Total, 75th ",
+                "visible": true,
+                "color": "rgb(109, 0, 232)",
+                "dashStyle": "Solid",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [1046,1025,1018,1024,1036,1048,1050,1062,1066,1083,1087,1068,1071,1086,1098,1107,1110,1108,1118,1143,1173,1177,1198,1213,1220,1218,1208,1205,1221,1236,1265,1256,1235,1246,1257,1250],
+                "_symbolIndex": 3
+            }, 
+			
+			{
+                "name": "Total, 50th ",
+                "visible": true,
+                "color": "rgb(0, 219, 255)",
+                "dashStyle": "Solid",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [733,716,710,711,707,707,721,740,745,740,735,723,722,727,740,738,739,736,740,758,780,791,797,800,798,799,789,788,793,793,816,811,796,792,789,791],
+                "_symbolIndex": 2
+            }, 
+			
+			{
+                "name": "Total, 25th ",
+                "visible": true,
+                "color": "rgb(34, 106, 0)",
+                "dashStyle": "Solid",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [508,497,490,489,485,484,486,497,500,500,499,493,493,491,490,483,481,479,484,503,518,522,529,532,532,528,520,522,530,533,543,535,525,520,519,518],
+                "_symbolIndex": 1
+            }, 
+			
+			
+			{
+                "name": "Total, 10th ",
+                "visible": true,
+                "color": "rgb(255, 177, 0)",
+                "dashStyle": "Solid",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [383,374,370,362,357,356,354,361,361,358,357,354,359,355,358,348,350,350,356,371,382,386,388,388,387,382,376,374,377,380,386,383,377,370,378,379],
+                "_symbolIndex": 0
+            }, 
+			
+			{
+                "name": "Men, 90th ",
+                "visible": false,
+                "color": "rgb(255, 39, 0)",
+                "dashStyle": "LongDash",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [1565,1557,1535,1586,1614,1627,1650,1687,1729,1752,1724,1725,1698,1679,1694,1777,1779,1767,1806,1868,1939,1973,2008,2034,2030,2063,2047,2055,2096,2076,2108,2088,2025,2095,2120,2094],
+                "_symbolIndex": 4
+            }, 
+			
+			
+			{
+                "name": "Men, 75th ",
+                "visible": false,
+                "color": "rgb(109, 0, 232)",
+                "dashStyle": "LongDash",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [1201,1156,1170,1176,1165,1178,1205,1231,1225,1229,1234,1219,1214,1212,1226,1234,1242,1242,1262,1297,1327,1327,1349,1354,1372,1372,1356,1354,1361,1373,1404,1398,1386,1400,1404,1393],
+                "_symbolIndex": 3
+            }, 
+			
+			{
+                "name": "Men, 50th ",
+                "visible": false,
+                "color": "rgb(00, 219, 255)",
+                "dashStyle": "LongDash",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [888,855,850,856,856,850,853,864,865,863,862,844,836,828,823,825,830,836,851,867,878,880,896,893,894,893,875,872,874,877,904,895,876,880,874,871],
+                "_symbolIndex": 2
+            }, 
+			
+			{
+                "name": "Men, 25th ",
+                "visible": false,
+                "color": "rgb(34, 106, 0)",
+                "dashStyle": "LongDash",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [623,604,593,586,576,575,577,584,582,573,564,553,547,540,544,534,540,539,547,562,577,574,586,586,587,588,577,573,573,569,581,569,557,560,558,569],
+                "_symbolIndex": 1
+            }, 
+			
+			
+			
+			 {
+                "name": "Men, 10th ",
+                "visible": false,
+                "color": "rgb(255, 177, 0)",
+                "dashStyle": "LongDash",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [447,434,428,416,406,401,400,402,402,400,396,393,392,385,387,379,381,380,390,404,412,412,416,413,412,405,401,403,408,412,416,407,398,394,394,395],
+                "_symbolIndex": 0
+            }, 
+			
+			
+			
+			{
+                "name": "Women, 90th ",
+                "visible": false,
+                "color": "rgb(255, 39, 0)",
+                "dashStyle": "DashDot",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [970,978,993,1005,1038,1067,1078,1111,1149,1169,1188,1200,1224,1253,1277,1295,1295,1308,1334,1367,1396,1400,1440,1472,1486,1491,1515,1508,1537,1551,1593,1609,1595,1598,1608,1621],
+                "_symbolIndex": 4
+            },
+			
+			
+			 {
+                "name": "Women, 75th ",
+                "visible": false,
+                "color": "rgb(109, 0, 232)",
+                "dashStyle": "DashDot",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [748,738,748,762,783,798,818,841,849,865,878,875,880,896,926,932,931,929,935,959,984,988,1003,1021,1037,1048,1045,1042,1053,1052,1083,1088,1077,1071,1098,1102],
+                "_symbolIndex": 3
+            },
+			
+			{
+                "name": "Women, 50th ",
+                "visible": false,
+                "color": "rgb(0, 219, 255)",
+                "dashStyle": "DashDot",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [553,549,548,562,569,575,581,600,604,606,604,607,620,628,634,630,627,628,634,661,672,677,684,696,710,718,709,704,701,701,725,726,720,712,717,719],
+                "_symbolIndex": 2
+            },
+			
+			 {
+                "name": "Women, 25th ",
+                "visible": false,
+                "color": "rgb(34, 106, 0)",
+                "dashStyle": "DashDot",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [422,415,413,416,418,416,417,427,430,431,433,433,442,445,448,439,437,437,440,452,459,464,477,487,489,486,479,477,477,484,499,497,495,485,491,487],
+                "_symbolIndex": 1
+            }, 
+			
+			
+			
+			{
+                "name": "Women, 10th ",
+                "visible": false,
+                "color": "rgb(255, 177, 0)",
+                "dashStyle": "DashDot",
+                "type": "line",
+                "lineWidth": 1.5,
+                "marker": {
+                    "enabled": false
+                },
+                "data": [313,342,338,327,323,319,314,320,321,323,326,325,331,332,334,319,319,323,331,342,351,356,361,366,366,362,354,351,353,354,362,363,358,345,355,357],
+                "_symbolIndex": 0
+            }
+			
+			],
+
+            ///////////////x axis/////////////////////
+
+            xAxis: {
+
+                title: {
+
+                    text: '',
+
+                    margin: 6,
+
+
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        fontWeight: 'normal',
+
+                        backgroundColor: '#fff',
+
+                        fontSize: '13px'
+
+                    }
+
+                },
+
+                tickInterval: 5,
+
+                tickmarkPlacement: 'on',
+
+
+
+                tickPosition: 'outside',
+
+                lineWidth: 1.2,
+
+                lineColor: 'gray',
+
+
+
+                labels: {
+
+                    //   formatter: function() {return Highcharts.numberFormat(this.value,0)},
+
+
+
+                    formatter: function() {
+
+                        var hideMonths = false;
+
+                        if (hideMonths == true) {
+
+                            return this.value.replace(/\D+/g, '');
+
+                        } else {
+
+                            return this.value;
+
+                        }
+
+                    },
+
+                    rotation: 0,
+
+                    //	overflow: 'justify',
+
+                    // x: -2,
+
+                    //   y: 18,
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        fontWeight: 'normal',
+
+                        backgroundColor: '#fff',
+
+                        fontSize: '12px'
+
+                    }
+
+                },
+
+                plotBands: [],
+
+
+
+                categories: ["1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"]
+
+            },
+
+            //end xaxis
+
+
+
+            //////////// Y AXIS ////////////////////////////////////
+
+
+
+            yAxis: [{
+
+                    type: 'linear',
+
+                    labels: {
+
+
+
+                        formatter: function() {
+
+                            ///////if butterfly chart ///////////////////////////
+
+                            if (false == true) {
+
+                                if (this.value > 0) { ///don't show positive values on this y axis for butterfly charts
+
+                                    return "";
+
+                                } else {
+
+                                    return Math.abs(this.value);
+
+                                }
+
+                                /////////end if butterfly chart///////////
+
+
+
+
+                                ///ALL Other types of charts , show all values at specified decimal and divisor ////////////////////////
+
+                            } else {
+
+
+
+                                if (false == true) { // if forced decimals chosen
+
+                                    return '$' + Highcharts.numberFormat(this.value / 1, 0) + '';
+
+                                } else {
+
+                                    return '$' + addCommas(this.value / 1) + '';
+
+                                }
+
+
+
+                            }
+
+                            /// end y axis formatter
+
+
+
+                        },
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '12px',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                        }
+
+
+
+                    },
+
+
+
+                    tickInterval: null,
+
+                    tickWidth: 1,
+
+                    lineWidth: 1,
+
+                    lineColor: 'gray',
+
+                    gridLineColor: '#c0c0c0',
+
+                    gridLineWidth: 1.0,
+
+                    gridLineDashStyle: 'Dot',
+
+                    min: null,
+
+                    max: null,
+
+                    plotLines: [{
+                        "value": 0,
+                        "color": "#c0c0c0",
+                        "dashStyle": "solid",
+                        "width": 1
+                    }],
+
+
+
+                    title: {
+
+                        align: 'high',
+
+                        offset: 0,
+
+                        text: '',
+
+                        rotation: 0,
+
+                        y: -15,
+
+                        x: 35,
+
+
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '13px'
+
+                        }
+
+                    }
+
+
+
+
+                },
+
+                ///second y axis (for recession or butterfly)
+
+
+
+                {
+                    "max": 20,
+                    "labels": {
+                        formatter: function() {
+                            if (this.value < 0) {
+                                return "";
+                            } else {
+                                return Math.abs(this.value);
+                            }
+                        },
+                        "style": {
+                            "color": "#fff"
+                        }
+                    },
+                    "lineWidth": 0,
+                    "gridLineWidth": 0,
+                    "plotLines": null,
+                    "title": {
+                        "text": ""
+                    },
+                    "linkedTo": 0,
+                    "opposite": true,
+                    "index": 1
+                }
+
+                //end second y axis
+
+
+            ],
+
+
+
+            ////////////////////LEGEND////////////////////
+
+
+
+            legend: {
+
+                layout: 'vertical',
+
+                //make vertical or horizontal
+
+                enabled: true,
+
+                backgroundColor: 'none',
+
+                borderWidth: 0,
+
+                borderColor: 'none',
+
+                shadow: false,
+
+                align: 'center',
+
+                //alignment of legend items
+
+                verticalAlign: 'top',
+
+                x: 230,
+
+                //Higher number moves legend right
+
+                y: 80,
+
+                //Higher number moves legend down
+
+                // width: 590,
+
+                //small widths will cause horizontal layouts to stack
+
+                floating: false,
+
+                //true makes legend independent of chart objects
+
+                reversed: false,
+
+
+                //reverses legend item order - handy to line up with column order
+
+                //  itemWidth: 195,
+
+                // symbolWidth: 30,
+
+
+
+
+                itemStyle: { //Three legend item styles for active, hover, and deselected - setting these specifically fixes browser differences
+
+                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                    lineHeight: 1.2,
+
+                    color: '#000080'
+
+                },
+
+                itemHiddenStyle: {
+
+                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                    color: 'gray',
+
+                    lineHeight: 1.2
+
+                },
+
+                itemHoverStyle: {
+
+                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                    lineHeight: 1.2
+
+                    //	,cursor: "default"  ///un note when legend click is disabled
+
+                }
+
+            },
+
+
+
+            ///////////////////////TOOLTIP///////////////////// (making from manual entry)
+
+            tooltip: {
+
+                backgroundColor: '#FCFFC5',
+
+                useHTML: true,
+
+                style: {
+
+                    color: '#000000',
+
+                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                },
+
+                //tooltip is what shows on hover
+
+                formatter: function() {
+
+
+
+                    ///function to add absolute value for butterfly charts
+
+                    var makeAbsoluteIfButterfly = function(val) {
+
+                        if (false == true) { //if Butterfly == true?
+
+                            return Math.abs(val);
+
+                        } else {
+
+                            return val;
+
+                        }
+
+                    }
+
+
+
+
+                    //function to add dollarsigns if needed, and correctly do it for neg values
+
+                    var negDollarFormat = function(val) {
+
+                        if (true == true) { //if using dollars == true
+
+                            ///convert to number again
+
+                            val = Number(val.replace(/,/g, ""));
+
+                            if (val >= 0) {
+
+                                return "$" + Highcharts.numberFormat(val, 0);
+
+                            } else {
+
+                                return "-$" + Highcharts.numberFormat(Highcharts.numberFormat(Math.abs(val), 0), 0);
+
+                            }
+
+                        } else { ///not using dollars
+
+                            return val;
+
+                        }
+
+                    }
+
+
+
+                    if ('line' == "bubble" && this.series.xAxis.axisTitle && this.series.yAxis.axisTitle) {
+
+                        var s = this.series.name + "<br>" + this.series.xAxis.axisTitle.text + ": <b>" + negDollarFormat(Highcharts.numberFormat(this.x * 1, 0)) + "</b><br>" + this.series.yAxis.axisTitle.text + ": <b>" + negDollarFormat(Highcharts.numberFormat(this.y * 1, 0)) + "</b><br>" + "" + ": <b>" + this.point.z + "</b>";
+
+                        /////////////////////for single tooltip not bubble////////////////////////////////////////////////////////////////// 	
+
+                    } else if (false == false) {
+                        if (this.point.high) { ///for ranges
+                            var s = '<b>' + this.series.name + '</b><br>' + this.x + "<br>High: <b>" + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.high * 1), 0)) + '' + '</b>' + "<br>Low: <b>" + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.low * 1), 0)) + '' + '</b>';
+
+                        } else { ///for not ranges
+                            var s = '<b>' + this.series.name + '</b><br>' + this.x + ": <b>" + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.y * 1), 0)) + '' + '</b>';
+                        }
+
+                    } else { //////////////////////for shared tooltip ////////////////////////////////////////////////////////////////////////
+
+                        var s = '<b>' + this.x + '</b>';
+
+                        $.each(this.points, function(i, point) {
+                            if (this.point.high) { ///for ranges
+                                s += '<br/><span style="color: ' + point.series.color + '">' + point.series.name + '</span><br>High: <b>' + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.high * 1), 0)) + '' + '</b><br>Low: <b>' + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(this.point.low * 1), 0)) + '' + '</b>';
+                            } else { ///not ranges
+                                s += '<br/><span style="color: ' + point.series.color + '">' + point.series.name + '</span>: <b>' + negDollarFormat(Highcharts.numberFormat(makeAbsoluteIfButterfly(point.y * 1), 0)) + '' + '</b>';
+                            }
+
+
+
+                        });
+
+
+
+
+                    }
+
+                    return s;
+
+                },
+
+                shared: false
+
+
+
+            },
+
+
+
+
+            /////////////////PLOT OPTIONS///////////////////
+
+            plotOptions: {
+
+                series: {
+
+
+
+
+                    /* un note to turn off legend click - remember to change cursor to "default" in legend properties
+
+				events: {
+
+            legendItemClick: function () {
+
+                return false; 
+
+            }
+
+				},
+
+			*/
+
+                    dataLabels: {
+
+                        enabled: false
+
+                    },
+
+                    pointPadding: 0.1, //padding between points in bar charts  (0 is tight)1 is loose
+
+                    groupPadding: 0.2, // padding between groups in bar charts (0 is tight)1 is loose
+
+                    maxSize: 50, //for bubble sizes
+
+                    sizeBy: 'width', //for bubble sizing, instead of 'area'
+
+                    pointPlacement: null,
+
+                    stacking: null,
+
+                    borderWidth: 0,
+
+
+
+                    shadow: false,
+
+                    animation: true
+
+                },
+
+
+
+                line: {
+
+                    lineWidth: 1.5,
+
+                    states: {
+
+                        hover: {
+
+                            lineWidth: 4
+
+                        }
+
+                    },
+
+                    marker: {
+
+                        enabled: true,
+
+                        //status of tick symbols
+
+                        states: {
+
+                            hover: {
+
+                                enabled: true,
+
+                                radius: 5
+
+
+
+                            }
+
+                        }
+
+                    }
+
+
+
+                }
+
+
+
+
+            },
+
+
+
+
+            credits: {
+
+                text: "Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.",
+
+                position: {
+
+                    align: 'left',
+
+                    x: 10,
+
+                    y: -25
+
+                },
+
+                style: {
+
+                    cursor: "default" //color: "black"
+
+
+
+                },
+
+                href: ""
+
+            },
+
+
+
+            exporting: {
+
+                buttons: {
+
+                    contextButton: {
+
+
+
+
+                        enabled: true,
+
+                        verticalAlign: 'bottom',
+
+                        x: -10
+
+
+
+                    }
+
+
+
+
+                }
+
+            }
+
+        }
+
+
+
+    );
+
+
+
+    window.chart1_chart = chart1_chart;
+
+
+
+
+    /* Saved chart information - paste this into chartmaker to load chart
+
+
+
+{"chartType":"line","dataLabelsEnabled":false,"isStacked":false,"chartPointPadding":0.1,"chartGroupPadding":0.2,"chartWidth":"580","chartHeight":"400","chartID":"chart1","useMLRStyles":false,"chartIsInverted":false,"chartIsZoom":"null","addRecession":false,"margins":{"top":"70","bottom":"64","left":"60","right":"110"},"xAxis":{"title":"","tickInterval":"3"},"yAxis":{"title":"","titleIndent":"35","autoInterval":true,"yAxisIsLog":false,"signs":"$","tickInterval":"10","forcedDecimal":"yDecimalNoForce","divide":"1"},"legend":{"layout":"vertical","x":"230","y":"80","legendIsReversed":false},"tooltip":{"isShared":false,"forcedDecimal":"0","signs":"$","multiple":"1"},"credits":{"text":"Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.","yPos":"-25"},"fromTableChecked":false,"fromTable":{"loadFrom":"rowsSelected","data":" ","colorRow":-1},"fromManual":{"title":"Usual weekly earnings percentiles of full-time wage and salary workers age 16 and older, in 2013 dollars, 1979–2013 annual averages","subTitle":"","xCategories":"\"1979\",\"1980\",\"1981\",\"1982\",\"1983\",\"1984\",\"1985\",\"1986\",\"1987\",\"1988\",\"1989\",\"1990\",\"1991\",\"1992\",\"1993\",\"1994\",\"1995\",\"1996\",\"1997\",\"1998\",\"1999\",\"2000\",\"2001\",\"2002\",\"2003\",\"2004\",\"2005\",\"2006\",\"2007\",\"2008\",\"2009\",\"2010\",\"2011\",\"2012\",\"2013\"","seriesInfo":[{"title":"Total, 10th ","data":"377,369,364,357,351,350,349,355,356,352,352,349,354,350,352,342,345,345,350,366,376,380,382,382,381,377,370,369,371,374,380,378,371,364,372","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(100, 0, 200)"},{"title":"Total, 25th ","data":"500,491,482,483,478,476,479,489,493,492,492,486,486,484,483,476,474,472,476,496,510,514,521,523,523,520,512,514,521,525,535,527,517,512,511","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(100, 100, 100)"},{"title":"Total, 50th ","data":"722,706,698,701,696,697,711,728,735,729,724,713,711,717,729,726,728,725,728,747,768,779,784,788,786,788,777,776,781,781,803,799,783,780,776","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(0, 255, 0)"},{"title":"Total, 75th ","data":"1030,1011,1000,1009,1020,1032,1035,1045,1051,1066,1071,1054,1055,1070,1081,1090,1093,1092,1100,1127,1155,1160,1179,1194,1202,1200,1190,1187,1202,1218,1246,1237,1216,1227,1237","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(255, 0, 0)"},{"title":"Total, 90th ","data":"1401,1356,1337,1378,1376,1410,1438,1471,1499,1504,1486,1495,1506,1518,1551,1547,1553,1567,1605,1650,1694,1706,1767,1782,1798,1802,1797,1786,1800,1832,1896,1892,1867,1904,1891","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(0, 0, 255)"},{"title":"Men, 10th ","data":"440,429,420,411,400,395,395,396,397,394,390,388,386,379,381,373,375,374,384,399,406,406,409,407,406,399,395,397,401,406,410,401,392,388,388","seriesType":"line","lineStyle":"LongDash","isVisible":false,"color":"rgb(99, 0, 221)"},{"title":"Men, 25th ","data":"614,596,582,578,567,566,568,574,574,564,555,545,539,533,535,526,532,531,538,554,568,566,576,576,578,579,568,564,564,561,572,560,548,551,549","seriesType":"line","lineStyle":"LongDash","isVisible":false,"color":"rgb(100, 100, 100)"},{"title":"Men, 50th ","data":"874,844,835,845,842,838,841,850,853,850,849,832,823,816,810,812,818,824,838,854,864,867,882,880,881,880,862,859,861,864,890,881,862,867,860","seriesType":"line","lineStyle":"LongDash","isVisible":false,"color":"rgb(0, 255, 0)"},{"title":"Men, 75th ","data":"1183,1140,1150,1160,1147,1160,1188,1211,1208,1210,1216,1202,1195,1194,1206,1215,1223,1223,1242,1279,1306,1307,1328,1333,1351,1352,1335,1334,1339,1352,1383,1378,1365,1379,1382","seriesType":"line","lineStyle":"LongDash","isVisible":false,"color":"rgb(255, 0, 0)"},{"title":"Men, 90th ","data":"1542,1536,1509,1564,1589,1603,1626,1659,1705,1725,1699,1701,1673,1655,1667,1750,1752,1741,1777,1841,1909,1943,1976,2003,1999,2032,2016,2024,2063,2044,2076,2057,1994,2063,2086","seriesType":"line","lineStyle":"LongDash","isVisible":false,"color":"rgb(0, 0, 255)"},{"title":"Women, 10th ","data":"308,337,332,323,318,314,310,314,316,318,321,320,326,327,329,314,315,318,326,337,345,350,355,360,360,357,348,346,347,348,357,357,352,340,349","seriesType":"line","lineStyle":"DashDot","isVisible":false,"color":"rgb(100, 0, 200)"},{"title":"Women, 25th ","data":"416,410,405,411,411,410,411,420,424,424,426,427,436,438,441,432,430,430,433,446,452,457,470,479,482,479,471,469,470,476,491,490,487,477,483","seriesType":"line","lineStyle":"DashDot","isVisible":false,"color":"rgb(100, 100, 100)"},{"title":"Women, 50th ","data":"545,542,538,555,560,566,572,590,595,597,595,599,611,619,624,621,617,618,624,651,662,667,674,685,700,707,698,694,690,690,714,716,709,702,706","seriesType":"line","lineStyle":"DashDot","isVisible":false,"color":"rgb(0, 255, 0)"},{"title":"Women, 75th ","data":"737,728,735,752,771,786,806,828,837,852,866,863,866,883,911,918,916,916,920,946,969,973,987,1005,1022,1032,1029,1027,1036,1036,1066,1072,1060,1055,1080","seriesType":"line","lineStyle":"DashDot","isVisible":false,"color":"rgb(255, 0, 0)"},{"title":"Women, 90th ","data":"955,965,975,991,1022,1051,1062,1093,1134,1152,1171,1183,1205,1235,1257,1275,1275,1288,1313,1347,1375,1379,1417,1449,1464,1469,1492,1486,1512,1527,1568,1585,1570,1574,1582","seriesType":"line","lineStyle":"DashDot","isVisible":false,"color":"rgb(0, 0, 255)"}]},"histogram":{"chartTitle":"Title Goes Here","subTitle":"","histogramNumberOfColumns":"5","histogramSeriesTitle":"Series","histogramSeriesData":"40,23,13,15,18,40,45,32,10,20,5,10,41,40","color":"rgb(47, 126, 216)"},"bubble":{"chartTitle":"Title Goes Here","chartSubTitle":"Bubble size represents... ","bubbleMaxSize":"50","bubbleSizeText":"","seriesInfo":[{"title":"Series 1","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 2","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"}]}}
+
+
+
+*/
+
+
+
+
+});

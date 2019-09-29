@@ -1,0 +1,713 @@
+$(document).ready(function () {
+    ///////add commas function
+
+    function addCommas(val) {
+        if ((val > 999) || (val < -999)) {
+            while (/(\d+)(\d{3})/.test(val.toString())) {
+                val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+            }
+        }
+        return val;
+    }
+	
+	
+	
+	/////function to add dollarsigns if needed, and correctly do it for neg values
+
+var negDollarFormat = function(val) {
+
+                            if (true == true) { //if using dollars == true
+
+                                ///convert to number again
+
+                                val = Number(val.replace(/,/g, ""));
+
+                                if (val >= 0) {
+
+                                    return "$" + Highcharts.numberFormat(val, 0);
+
+                                } else {
+
+                                    return "-$" + Highcharts.numberFormat(Math.abs(val), 0);
+
+                                }
+
+                            } else { ///not using dollars
+
+                                return val;
+
+                            }
+
+         }	
+	
+	
+	
+	
+
+    chart1_chart = new Highcharts.Chart({
+
+            chart: {
+
+                renderTo: "chart_cps_earnings_race",
+
+                spacingLeft: 20,
+
+                spacingRight: 20,
+
+                // margin: [110, 60, 70, 70], //[top, right, bottom, left], the higher the number the more pushed in
+
+                marginBottom: 55,
+
+                marginTop: 72,
+
+                marginLeft: 185,
+
+                marginRight: 100,
+
+                borderColor: 'white',
+
+                plotBorderWidth: 1,
+
+                plotBorderColor: 'none',
+
+                defaultSeriesType: "bar", //line, bar, etc...
+
+                zoomType: null,
+
+                inverted: false
+
+            },
+
+            title: {
+
+                text: "Selected percentiles of usual weekly earnings of full-time wage and salary workers age 16 and older, by gender, race, and Hispanic or Latino ethnicity, 2014 annual averages",
+
+                align: 'left',
+
+                x: 0,
+
+                width: '540px',
+
+                style: {
+
+                    color: '#000000',
+
+                    fontFamily: 'sans-serif',
+
+                    fontWeight: 'bold',
+
+                    fontSize: '14px'
+
+                }
+
+            },
+
+                subtitle: {
+
+                    text: "",
+
+                    align: 'left',
+
+                    x: 0,
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'sans-serif',
+
+                        fontWeight: 'normal',
+
+                        backgroundColor: '#fff',
+
+                        fontSize: '12px'
+
+                    }
+
+                },
+
+            ///////series data//////////////////        
+
+            series: [{"name":"90th percentile","data":[1898,2094,1621,1911,2120,1635,1466,1534,1391,2310,2560,1918,1380,1468,1234],"color":"rgb(255, 39, 0)","visible":true},{"name":"75th percentile","data":[1250,1393,1102,1275,1425,1124,971,1022,931,1558,1762,1364,888,927,821],"color":"rgb(109, 0, 232)","visible":true},{"name":"50th percentile (median)","data":[791,871,719,816,897,734,639,680,611,953,1080,841,594,616,548],"color":"rgb(0, 219, 255)","visible":true},{"name":"25th percentile","data":[518,569,487,536,585,496,443,460,431,591,635,524,411,426,391],"color":"rgb(34, 106, 0)","visible":true},{"name":"10th percentile","data":[379,395,357,385,404,362,336,339,335,395,416,376,328,341,309],"color":"rgb(255, 177, 0)","visible":true}],
+
+            ///////////////x axis/////////////////////
+
+            xAxis: {
+
+                title: {
+					
+				   useHTML: true,
+
+                    text: '',
+
+                    margin: 6,
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        fontWeight: 'normal',
+
+                        backgroundColor: '#fff',
+
+                        fontSize: '13px'
+
+                    }
+
+                },
+
+                tickInterval: null,
+
+                tickColor: '#C0D0E0',
+
+                tickmarkPlacement: 'on',
+
+                tickPosition: 'outside',
+
+                lineWidth: 1.2,
+
+                lineColor: 'gray',
+
+                labels: {
+
+                    //   formatter: function() {return Highcharts.numberFormat(this.value,0)},
+
+                    formatter: function() {
+
+                        var hideMonths = false;
+
+                        if (hideMonths == true) {
+
+                            return this.value.replace(/\D+/g, '');
+
+                        } else {
+
+                            return this.value;
+
+                        }
+
+                    },
+
+                    rotation: 0,
+
+                    //	overflow: 'justify',
+
+                    // x: -2,
+
+                    //     y: 18,
+
+                    style: {
+
+                        color: '#000000',
+
+                        fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                        fontWeight: 'normal',
+
+                        backgroundColor: '#fff',
+
+                        fontSize: '12px'
+
+                    }
+
+                },
+
+                plotBands: [],
+
+                categories: ["Total","Men","Women","White, total","White men","White women","Black or African American, total","Black or African American men","Black or African American women","Asian, total","Asian men","Asian women","Hispanic or Latino, total","Hispanic or Latino men","Hispanic or Latino women"]
+
+            },
+
+            //end xaxis
+
+            //////////// Y AXIS ////////////////////////////////////
+
+            yAxis: [
+
+                {
+
+                    title: {
+						
+						useHTML: true,
+
+                        text: '',
+
+                        align: 'middle',
+
+                        offset: 20,
+
+                        rotation: 0,
+
+                        y: -15,
+
+                        x: 35,
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '13px'
+
+                        }
+
+                    },
+
+                    type: 'linear',
+
+                    labels: {
+
+                        formatter: function() {
+
+                            var thisValue = this.value / 1;
+
+                            if (false == true) { // if forced decimals chosen
+
+                                var val = '$ '.replace(' ', '') + Highcharts.numberFormat(thisValue, 0) + '';
+                                val = val.replace("$-", "-$");
+                                return val;
+
+                            } else {
+
+                                var val = '$ '.replace(' ', '') + addCommas(thisValue) + '';
+                                val = val.replace("$-", "-$");
+                                return val;
+
+                            }
+
+                        },
+
+                        style: {
+
+                            color: '#000000',
+
+                            fontWeight: 'normal',
+
+                            backgroundColor: '#fff',
+
+                            fontSize: '12px',
+
+                            fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                        }
+
+                    },
+
+                    tickInterval: null,
+
+                    tickWidth: 1,
+
+                    lineWidth: 1,
+
+                    lineColor: 'gray',
+
+                    gridLineColor: '#c0c0c0',
+
+                    gridLineWidth: 1.0,
+
+                    gridLineDashStyle: 'Dot',
+
+                    min: null,
+
+                    max: null,
+
+                    plotLines: [{"value":0,"color":"#c0c0c0","dashStyle":"solid","width":1}]
+
+                },
+
+                ///second y axis (for butterfly)
+
+                {
+
+                    labels: {
+
+                        formatter: function() {
+
+                            return ""
+
+                        }
+
+                    },
+
+                    tickWidth: 0,
+
+                    gridLineWidth: 0,
+
+                    lineWidth: 0,
+
+                    //  min: 0,
+
+                    //  max: 20,
+
+                    plotLines: null,
+
+                    title: {
+
+                        text: ''
+
+                    },
+
+                    linkedTo: 0,
+
+                    opposite: true
+
+                } //end second y axis
+
+            ],
+
+            ////////////////////LEGEND////////////////////
+
+            legend: {
+
+                layout: 'vertical',
+
+                useHTML: false,
+
+                enabled: true,
+
+                //make vertical or horizontal
+
+                backgroundColor: 'none',
+
+                borderWidth: 0,
+
+                borderColor: 'none',
+
+                shadow: false,
+
+                align: 'center',
+
+                //alignment of legend items
+
+                verticalAlign: 'top',
+
+                x: 210,
+
+                //Higher number moves legend right
+
+                y: 230,
+
+                //Higher number moves legend down
+
+                // width: 590,
+
+                //small widths will cause horizontal layouts to stack
+
+                floating: false,
+
+                //true makes legend independent of chart objects
+
+                reversed: true,
+
+                //reverses legend item order - handy to line up with column order
+
+                //  itemWidth: 195,
+
+                symbolWidth: 30,
+
+                itemStyle: { //Three legend item styles for active, hover, and deselected - setting these specifically fixes browser differences
+
+                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif',
+					width: 580,
+                    color: '#000080'
+
+                },
+
+                itemHiddenStyle: {
+
+                    color: 'gray'
+
+                },
+
+                itemHoverStyle: {
+
+                    //	cursor: "default"  ///un note when legend click is disabled
+
+                }
+
+            },
+
+            ///////////////////////TOOLTIP///////////////////// (making from table)
+
+            tooltip: {
+
+                backgroundColor: "rgba(252, 255, 197,1)",
+
+                useHTML: false,
+
+                style: {
+
+                    color: '#000000',
+
+                    fontFamily: 'Calibri, Verdana, Arial, Helvetica, sans-serif'
+
+                },
+
+                //tooltip is what shows on hover
+
+                formatter: function () {
+    var s = "";
+    if (this.point.high) { ///for ranges
+        var s = '<b>' + this.series.name + '</b><br>' + this.x + "<br>High: <b>" + negDollarFormat(Highcharts.numberFormat(this.point.high * 1, 0)) + '' + '</b>' + "<br>Low: <b>" + negDollarFormat(Highcharts.numberFormat(this.point.low * 1, 0)) + '' + '</b>';
+
+    } else { ///for not ranges
+        var s = '<b>' + this.series.name + '</b><br>' + this.x + ": <b>" + negDollarFormat(Highcharts.numberFormat(this.y * 1, 0)) + '' + '</b>';
+    }
+
+    return s;
+},
+
+                shared: false
+
+            },
+
+            /////////////////PLOT OPTIONS///////////////////
+
+            plotOptions: {
+
+                series: {
+					
+					cursor: "default",
+
+                events: {
+                   legendItemClick: function(event) {
+					  var legendToggleEnabled = false; 
+					   
+					  if(legendToggleEnabled == true){
+                       var selected = this.index;
+                       var allSeries = this.chart.series;
+
+                       $.each(allSeries, function(index, series) {
+                           selected == index ? series.show() : series.hide();
+                       });
+
+                       return false;
+                     }
+				   }
+				   
+               },
+			
+			point: {
+
+					events: {
+
+						click: function() {
+							
+							if (drillIntoChart_func){
+								
+	
+								var drilldown = this.drilldown;
+	
+								if (drilldown) { // drill down
+	
+									drillIntoChart_func(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+	
+								} else { // restore
+	
+									drillIntoChart_func(stubHead, ["Total","Men","Women","White, total","White men","White women","Black or African American, total","Black or African American men","Black or African American women","Asian, total","Asian men","Asian women","Hispanic or Latino, total","Hispanic or Latino men","Hispanic or Latino women"], dataArray);
+	
+								}
+	
+							}
+							
+						}
+
+					}
+						
+
+				},
+			
+			
+
+                    dataLabels: {
+
+                        enabled: false
+
+                    },
+
+
+                    pointPlacement: null,
+
+                    borderWidth: 0,
+
+                    shadow: false,
+
+                    animation: true
+
+                },
+				bar:{
+					stacking: null,
+					pointPadding: 0.1, //padding between points in bar charts  (0 is tight)1 is loose
+                    groupPadding: 0.1 // padding between groups in bar charts (0 is tight)1 is loose
+				},  
+				column:{
+					stacking: null,
+					pointPadding: 0.1, //padding between points in bar charts  (0 is tight)1 is loose
+                    groupPadding: 0.1 // padding between groups in bar charts (0 is tight)1 is loose
+				},                                                                      
+
+                line: {
+
+                    lineWidth: 1.5,
+
+                    states: {
+
+                        hover: {
+
+                            lineWidth: 4
+
+                        }
+
+                    },
+
+                    marker: {
+
+                        enabled: false,
+
+                        //status of tick symbols
+
+                        states: {
+
+                            hover: {
+
+                                enabled: true,
+
+                                //    symbol: 'circle',
+
+                                radius: 5,
+
+                                lineWidth: 1
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            },
+
+            credits: {
+
+                text: "Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.",
+
+                position: {
+
+                    align: 'left',
+
+                    x: 10,
+
+                    y: -20
+
+                },
+
+                style: {
+
+                    cursor: "default",
+                    color: "#2C2C2C"
+
+                },
+
+                href: ""
+
+            },
+
+            exporting: {
+
+                buttons: {
+
+                    contextButton: {
+
+                        enabled: true,
+
+                        verticalAlign: 'bottom',
+
+                        x: -10
+
+                    }
+
+                }
+
+            }
+
+        }, function() {
+			
+				$(".highcharts-legend-item").css("min-height", "0px"); //fix so CMS CSS doesn't make legend taller than it should
+                //		 * Callback function for setting a lower opacity for other series than the one that is hovered in the legend
+                 var grayOtherSeries = function(isReversed, chartDiv) {
+
+						var thisChart = $("#"+chartDiv);
+						
+                        if (isReversed) {
+                            var mod = $(".highcharts-legend:eq(0) .highcharts-legend-item", thisChart).length -1;
+                            if (mod <= 0) {
+                                mod = 1;
+                            }
+                        }
+
+                        $(".highcharts-legend-item", thisChart).unbind("hover");
+
+                        var thisSeriesIndex = 0;
+
+                        $(".highcharts-legend-item", thisChart).hover(function() {
+
+                            if (isReversed) {
+                                thisSeriesIndex = mod - $(this).index();
+
+                            } else {
+                                thisSeriesIndex = $(this).index();
+                            }
+
+                            $(".highcharts-series", thisChart).each(function(index, element) {
+
+                                if (index != thisSeriesIndex) {
+                                    $(this).attr("opacity", 0.10);
+                                }
+                            });
+							
+							$(".highcharts-markers", thisChart).each(function(index, element) {
+
+                                if (index != thisSeriesIndex) {
+                                    $(this).attr("opacity", 0.10);
+                                }
+                            });
+							
+
+                        }, function() {
+                            $(".highcharts-series, .highcharts-markers", thisChart).each(function(index, element) {
+                                $(this).attr("opacity", 1.0);
+                            });
+							
+							
+                        });
+                    } //end grayOtherSeries(Bool)
+
+                grayOtherSeries(true, "chart1"); ///true is legend is reversed.
+
+            }
+
+    );
+
+    /* Saved chart information - paste everything between the note lines into chartmaker to load chart
+
+
+
+
+
+ {"chartType":"bar","dataLabelsEnabled":false,"isStacked":false,"chartPointPadding":0.1,"chartGroupPadding":0.1,"chartWidth":"620","chartHeight":"600","chartID":"chart1","useMLRStyles":false,"chartIsInverted":false,"chartIsZoom":"null","addRecession":false,"margins":{"top":"80","bottom":"50","left":"185","right":"100"},"xAxis":{"title":"","tickInterval":"1","autoInterval":true},"yAxis":{"title":"","titleIndent":"35","minVal":"","maxVal":"","autoInterval":true,"yAxisIsLog":false,"signs":"$","tickInterval":"10","forcedDecimal":"yDecimalNoForce","divide":"1"},"legend":{"layout":"vertical","x":"210","y":"230","toggleLegend":false,"legendIsReversed":true},"tooltip":{"isShared":false,"forcedDecimal":"0","signs":"$","multiple":"1"},"credits":{"text":"Click legend items to change data display. Hover over chart to view data.<br>Source: U.S. Bureau of Labor Statistics.","yPos":"-20"},"fromTableChecked":true,"fromTable":{"loadFrom":"rowsSelected","drillChartType":"drillChartTypeBarSelected","data":"<table id=\"BLS_table\" class=\"regular\" cellspacing=\"0\" cellpadding=\"0\" xborder=\"1\" style=\"width: 95%\"><caption><span class=\"tableTitle\">Selected percentiles of usual weekly earnings of full-time wage and salary workers age 16 and older, by gender, race, and Hispanic or Latino ethnicity, 2014 annual averages</span></caption><thead><tr><th rowspan=\"1\" id=\"columnHead0\" style=\"vertical-align: middle;\">Characteristic</th><th id=\"columnHead1\">10th percentile</th><th id=\"columnHead2\">25th percentile</th><th id=\"columnHead3\">50th percentile (median)</th><th id=\"columnHead4\">75th percentile</th><th id=\"columnHead5\">90th percentile</th></tr></thead><tbody><tr><th id=\"rowHead0\"><p>Total</p></th><td headers=\"rowHead0 columnHead1\"> 379 </td><td headers=\"rowHead0 columnHead2\"> 518 </td><td headers=\"rowHead0 columnHead3\"> 791 </td><td headers=\"rowHead0 columnHead4\"> 1,250 </td><td headers=\"rowHead0 columnHead5\"> 1,898 </td></tr><tr class=\"greenbar\"><th id=\"rowHead1\"><p>Men</p></th><td headers=\"rowHead1 columnHead1\"> 395 </td><td headers=\"rowHead1 columnHead2\"> 569 </td><td headers=\"rowHead1 columnHead3\"> 871 </td><td headers=\"rowHead1 columnHead4\"> 1,393 </td><td headers=\"rowHead1 columnHead5\"> 2,094 </td></tr><tr><th id=\"rowHead2\"><p>Women</p></th><td headers=\"rowHead2 columnHead1\"> 357 </td><td headers=\"rowHead2 columnHead2\"> 487 </td><td headers=\"rowHead2 columnHead3\"> 719 </td><td headers=\"rowHead2 columnHead4\"> 1,102 </td><td headers=\"rowHead2 columnHead5\"> 1,621 </td></tr><tr class=\"greenbar\"><th id=\"rowHead3\"><p>White, total</p></th><td headers=\"rowHead3 columnHead1\"> 385 </td><td headers=\"rowHead3 columnHead2\"> 536 </td><td headers=\"rowHead3 columnHead3\"> 816 </td><td headers=\"rowHead3 columnHead4\"> 1,275 </td><td headers=\"rowHead3 columnHead5\"> 1,911 </td></tr><tr><th id=\"rowHead4\"><p>White men</p></th><td headers=\"rowHead4 columnHead1\"> 404 </td><td headers=\"rowHead4 columnHead2\"> 585 </td><td headers=\"rowHead4 columnHead3\"> 897 </td><td headers=\"rowHead4 columnHead4\"> 1,425 </td><td headers=\"rowHead4 columnHead5\"> 2,120 </td></tr><tr class=\"greenbar\"><th id=\"rowHead5\"><p>White women</p></th><td headers=\"rowHead5 columnHead1\"> 362 </td><td headers=\"rowHead5 columnHead2\"> 496 </td><td headers=\"rowHead5 columnHead3\"> 734 </td><td headers=\"rowHead5 columnHead4\"> 1,124 </td><td headers=\"rowHead5 columnHead5\"> 1,635 </td></tr><tr><th id=\"rowHead6\"><p>Black or African American, total</p></th><td headers=\"rowHead6 columnHead1\"> 336 </td><td headers=\"rowHead6 columnHead2\"> 443 </td><td headers=\"rowHead6 columnHead3\"> 639 </td><td headers=\"rowHead6 columnHead4\"> 971 </td><td headers=\"rowHead6 columnHead5\"> 1,466 </td></tr><tr class=\"greenbar\"><th id=\"rowHead7\"><p>Black or African American men</p></th><td headers=\"rowHead7 columnHead1\"> 339 </td><td headers=\"rowHead7 columnHead2\"> 460 </td><td headers=\"rowHead7 columnHead3\"> 680 </td><td headers=\"rowHead7 columnHead4\"> 1,022 </td><td headers=\"rowHead7 columnHead5\"> 1,534 </td></tr><tr><th id=\"rowHead8\"><p>Black or African American women</p></th><td headers=\"rowHead8 columnHead1\"> 335 </td><td headers=\"rowHead8 columnHead2\"> 431 </td><td headers=\"rowHead8 columnHead3\"> 611 </td><td headers=\"rowHead8 columnHead4\"> 931 </td><td headers=\"rowHead8 columnHead5\"> 1,391 </td></tr><tr class=\"greenbar\"><th id=\"rowHead9\"><p>Asian, total</p></th><td headers=\"rowHead9 columnHead1\"> 395 </td><td headers=\"rowHead9 columnHead2\"> 591 </td><td headers=\"rowHead9 columnHead3\"> 953 </td><td headers=\"rowHead9 columnHead4\"> 1,558 </td><td headers=\"rowHead9 columnHead5\"> 2,310 </td></tr><tr><th id=\"rowHead10\"><p>Asian men</p></th><td headers=\"rowHead10 columnHead1\"> 416 </td><td headers=\"rowHead10 columnHead2\"> 635 </td><td headers=\"rowHead10 columnHead3\"> 1,080 </td><td headers=\"rowHead10 columnHead4\"> 1,762 </td><td headers=\"rowHead10 columnHead5\"> 2,560 </td></tr><tr class=\"greenbar\"><th id=\"rowHead11\"><p>Asian women</p></th><td headers=\"rowHead11 columnHead1\"> 376 </td><td headers=\"rowHead11 columnHead2\"> 524 </td><td headers=\"rowHead11 columnHead3\"> 841 </td><td headers=\"rowHead11 columnHead4\"> 1,364 </td><td headers=\"rowHead11 columnHead5\"> 1,918 </td></tr><tr><th id=\"rowHead12\"><p>Hispanic or Latino, total</p></th><td headers=\"rowHead12 columnHead1\"> 328 </td><td headers=\"rowHead12 columnHead2\"> 411 </td><td headers=\"rowHead12 columnHead3\"> 594 </td><td headers=\"rowHead12 columnHead4\"> 888 </td><td headers=\"rowHead12 columnHead5\"> 1,380 </td></tr><tr class=\"greenbar\"><th id=\"rowHead13\"><p>Hispanic or Latino men</p></th><td headers=\"rowHead13 columnHead1\"> 341 </td><td headers=\"rowHead13 columnHead2\"> 426 </td><td headers=\"rowHead13 columnHead3\"> 616 </td><td headers=\"rowHead13 columnHead4\"> 927 </td><td headers=\"rowHead13 columnHead5\"> 1,468 </td></tr><tr><th id=\"rowHead14\"><p>Hispanic or Latino women</p></th><td headers=\"rowHead14 columnHead1\"> 309 </td><td headers=\"rowHead14 columnHead2\"> 391 </td><td headers=\"rowHead14 columnHead3\"> 548 </td><td headers=\"rowHead14 columnHead4\"> 821 </td><td headers=\"rowHead14 columnHead5\"> 1,234 </td></tr></tbody></table>","colorRow":19},"fromManual":{"title":"Title Goes Here","subTitle":"","xCategories":"\"Dec 2012\",\"Jan 2013\",\"Feb 2013\",\"Mar 2013\",\"Apr 2013\",\"May 2013\",\"Jun 2013\",\"Jul 2013\",\"Aug 2013\",\"Sep 2013\",\"Oct 2013\",\"Nov 2013\",\"Dec 2013\",\"Jan 2014\"","seriesInfo":[{"title":"Series 1","data":"40,23,13,15,18,40,45,32,10,20,5,10,40,40","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(47, 126, 216)"},{"title":"Series 2","data":"40,40,40,23,13,32,10,20,5,10,15,18,40,45","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(176, 76, 76)"},{"title":"Series 3","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 4","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(145, 0, 0)"},{"title":"Series 5","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(26, 173, 206)"},{"title":"Series 6","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(73, 41, 112)"},{"title":"Series 7","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(242, 143, 67)"},{"title":"Series 8","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(119, 161, 229)"},{"title":"Series 9","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(196, 37, 37)"},{"title":"Series 10","data":"","seriesType":"line","lineStyle":"Solid","isVisible":true,"color":"rgb(166, 201, 106)"}]},"histogram":{"chartTitle":"Title Goes Here","subTitle":"","histogramNumberOfColumns":"5","histogramSeriesTitle":"Series","histogramSeriesData":"40,23,13,15,18,40,45,32,10,20,5,10,41,40","color":"rgb(47, 126, 216)"},"bubble":{"chartTitle":"Title Goes Here","chartSubTitle":"Bubble size represents... ","bubbleMaxSize":"50","bubbleSizeText":"","seriesInfo":[{"title":"Series 1","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"},{"title":"Series 2","x":"","y":"","r":"","isVisible":true,"color":"rgb(139, 188, 33)"}]}}
+
+ 
+
+ 
+
+ */
+
+});// JavaScript Document
