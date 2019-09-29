@@ -35,4 +35,4 @@ Labor Force Participation Survey, Annual 2018.
 https://www.bls.gov/cps/tables.htm  
 
 
-![By Occupation & Perntiles](inequality/chart8-BY-Occu-Percentiles.jpg)
+![Income By Occupation & Perntiles](inequality/chart8-By-Occu-Percentiles.jpg)
