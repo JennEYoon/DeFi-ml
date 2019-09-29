@@ -26,3 +26,10 @@ Earnings:
 Between 2017 and 2018, the real median earnings of all workers increased 3.4 percent to $40,247 (Figure 4 and Table A-6).
 The 2018 real median earnings of men ($55,291) and women ($45,097) who worked full-time, year-round increased by 3.4 percent and 3.3 percent, respectively, (Figure 4 and Table A-6) between 2017 and 2018. The 2018 female-to-male earnings ratio was 0.816, not statistically different from the 2017 ratio.
 The number of full-time, year-round workers increased by 2.3 million, between 2017 and 2018. The number of men and women full-time, year-round workers increased by about 700,000 and 1.6 million, respectively.
+
+
+#### 1. Bureau of Labor Statistics  
+https://www.bls.gov/  
+
+Labor Force Participation Survey, Annual 2018.  
+https://www.bls.gov/cps/tables.htm  
