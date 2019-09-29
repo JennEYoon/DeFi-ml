@@ -39,6 +39,6 @@ https://www.bls.gov/cps/tables.htm
 
 Rachel Maddow probably makes over $200,000.  News Broadcast Analyst has the widest rante at 10% and 90%.  Lower paid occupations have narrower range, such as fast food prep and taxi/limo drivers.  Maids and household workers also probably have narrower range.  
 
-> What is Rachel Maddow’s salary?
+> **What is Rachel Maddow’s salary?**  
 Rachel Maddow gets paid $7 million a year for hosting her talk show. The large sum is thanks to her increasing popularity, and dedication to journalism – which is apparent in the awards her show has won over the years.  
 > https://www.cheatsheet.com/entertainment/how-much-is-rachel-maddow-worth-and-what-is-her-salary.html/  
