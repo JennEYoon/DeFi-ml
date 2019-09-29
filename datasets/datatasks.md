@@ -37,4 +37,4 @@ https://www.bls.gov/cps/tables.htm
 <img src="inequality/chart8-By-Occu-Percentiles.jpg" alt="Income by Occupation and Percentiles" width="600" height="auto">
 /![Income By Occupation & Perntiles](inequality/chart8-By-Occu-Percentiles.jpg)
 
-Rachel Maddow probably makes over $200,000.  News Broadcast Analyst has the widest rante at 10% and 90%.  Lower paid occupations has narrower range, such as fast food prep and taxi/limo drivers.  
+Rachel Maddow probably makes over $200,000.  News Broadcast Analyst has the widest rante at 10% and 90%.  Lower paid occupations have narrower range, such as fast food prep and taxi/limo drivers.  Maids and household workers also probably have narrower range.  
