@@ -12,7 +12,7 @@
 https://www.census.gov/library/visualizations/interactive/2018-median-household-income.html  
 Most states have 2 modes, $50-$75K and $80-$115K range. 
 
-![2018 US median income map](2018map-median-income.png)
+![2018 US median income map](inequality/2018map-median-income.png)
 
 Can download data in various formats, including Tableau.  
 Maps also available.  
