@@ -37,7 +37,7 @@ There are several methodologies by which income inequality can be measured and e
 
 Several other federal agencies also publish reports, tables and data on income inequality.  See “Related Sites” to get links to their websites.
 
-Related Sites
+![Related Sites](Related Sites.thml)
 
 Several other Federal and International agencies publish statistics relating to income inequality.
 
