@@ -52,6 +52,6 @@ Date:  9/16/2019 - Projects datasciY.com
 
 ### Update 10/1/1029  PySal/Inequality repo  
 
-https://github.com/JennEYoon/inequality/blob/master/notebooks/gini.ipynb
+https://github.com/JennEYoon/inequality/blob/master/notebooks/gini.ipynb  
 
 This seems to be nothing more than 1 notebook that uses geo package to create a sample document on how to use gini index mapping for Mexico in the year 1940.  Is there something more?  Can reproduce the notebook, or something similar, for USA, for different time periods.  Compare with UK, China, Hong Kong.  
