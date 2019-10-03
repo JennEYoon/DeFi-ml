@@ -55,3 +55,10 @@ Date:  9/16/2019 - Projects datasciY.com
 https://github.com/JennEYoon/inequality/blob/master/notebooks/gini.ipynb  
 
 This seems to be nothing more than 1 notebook that uses geo package to create a sample document on how to use gini index mapping for Mexico in the year 1940.  Is there something more?  Can reproduce the notebook, or something similar, for USA, for different time periods.  Compare with UK, China, Hong Kong.  
+
+#### Oct 3, 2019 Hactoberfest Started  
+
+  * To do 4 pull requests by this weekend.  
+  * Created "New Issue" for Inequality Docs -- SECdataPy repo.  
+  * Re-read creating pull request.  Make changes.
+  
