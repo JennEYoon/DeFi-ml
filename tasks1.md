@@ -60,5 +60,7 @@ This seems to be nothing more than 1 notebook that uses geo package to create a 
 
   * To do 4 pull requests by this weekend.  
   * Created "New Issue" for Inequality Docs -- SECdataPy repo.  
-  * Re-read creating pull request.  Make changes.
+  * Created template in "comments".
+  * To add data examples using "pull requests".
+  * Re-read about creating pull request.
   
