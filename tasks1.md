@@ -64,3 +64,14 @@ This seems to be nothing more than 1 notebook that uses geo package to create a 
   * To add data examples using "pull requests".
   * Re-read about creating pull request.
   
+#### Pull Request steps  
+
+ * First, need to create something to add (a new inequality data doc)
+ * Add changes to "inequality" branch local.
+ * Create Pull Request with "branch inequality"
+ * Upload new document to that branch - commit to brnach, pull request.  
+ * Finalize draft pull request.  
+ * Merge as owner, into branch.  Accept pull request.
+ * Merge into master branch.  
+ 
+ 
