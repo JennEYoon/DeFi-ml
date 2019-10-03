@@ -74,4 +74,7 @@ This seems to be nothing more than 1 notebook that uses geo package to create a 
  * Merge as owner, into branch.  Accept pull request.
  * Merge into master branch.  
  
- 
+Use "BLS-By-State-Inequality.png" image.  May 2019 data.  What is it now? 2019?  
+Washington DC has 6x from top 10% to bottom 90%.  
+South Dakoda has lowest inequality with 3.5X between top 10% to bottom 90%.  
+https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-State-Inequality.png  
