@@ -78,3 +78,13 @@ Use "BLS-By-State-Inequality.png" image.  May 2019 data.  What is it now? 2019?
 Washington DC has 6x from top 10% to bottom 90%.  
 South Dakoda has lowest inequality with 3.5X between top 10% to bottom 90%.  
 https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-State-Inequality.png  
+
+
+#### 10/4/2019 Tasks Update -- today to do.  
+
+ * Moves github testing files to "tests" folder.  
+ * Copy "Inequality Docs Template" to "data/inequality" folder in "branch inequality".
+ * Commit to this branch, push, see what happens to Github commits count.
+ * Optional -- add new commit to "inequality docs" pull request under Hactoberfest.
+ 
+ 
