@@ -1,4 +1,4 @@
-#  Task list for SEC data machine learning repo.
+#  Task list for SEC data Python machine learning repo.
 
 Date:  8/24/2019  2:00 AM EST -- inspired by DREAM.    
 
@@ -44,17 +44,19 @@ Date:  9/16/2019 - Projects datasciY.com
       - SO 56GB buffer Questioner, SO NASA data object write questioner. 
     * Lookup SEC/FINRA TRACE corporate bond credit ratings database.  What state is it now?
 
-### Update 9/28/2019  Eata - Economic Inequality, Map.  
+### Update 9/28/2019  Eata - Economic Inequality, Map.  Update 10/5/2019.  
 
- * New report, USA greatest inequality in history, yet number of people in poverty is lower than ever before, absolute improvement.  Unemployment is also lower, but check total labor force participation.  
-  * https://www.washingtonpost.com/business/2019/09/26/income-inequality-america-highest-its-been-since-census-started-tracking-it-data-show/  
-   * 
+ * New report, USA greatest inequality in history, yet number of people in poverty is lower than ever before, absolute improvement.  Unemployment is also lower, but check total labor force participation.  % People in poverty only increased in 1 state, CT, from 2017 to 2018 in USA.  Improvements or statistically same in all other states.  So absolute poverty improved generally in US.  
+  * Article hishgest inequality:  https://www.washingtonpost.com/business/2019/09/26/income-inequality-america-highest-its-been-since-census-started-tracking-it-data-show/  
+   * Article on Virginia counties inequality:  https://patch.com/virginia/leesburg/poverty-income-trends-virginia  
 
 ### Update 10/1/1029  PySal/Inequality repo  
 
 https://github.com/JennEYoon/inequality/blob/master/notebooks/gini.ipynb  
 
 This seems to be nothing more than 1 notebook that uses geo package to create a sample document on how to use gini index mapping for Mexico in the year 1940.  Is there something more?  Can reproduce the notebook, or something similar, for USA, for different time periods.  Compare with UK, China, Hong Kong.  
+
+PySAL is a larger package, python map database and visualization.  NumFocus sponsored.  Look into it more. 10/5/2019.  
 
 #### Oct 3, 2019 Hactoberfest Started  
 
@@ -63,6 +65,9 @@ This seems to be nothing more than 1 notebook that uses geo package to create a 
   * Created template in "comments".
   * To add data examples using "pull requests".
   * Re-read about creating pull request.
+  * Done 1 pull-request & merge with template inequality.
+  * To Do 2nd pull-request & merge with BLS data in Issue#1 inequality.  
+  * Do 2 more for Hactoberfest by Sunday/Monday.  
   
 #### Pull Request steps  
 
