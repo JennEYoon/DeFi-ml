@@ -1,0 +1,9 @@
+# Tasks datasets SEC data Py repo  
+
+ * Finish uploading inequality data.  
+ 
+ * For Bill - do analysis of what would happen to GDP and incomes/taxe collection  
+   - if Coastal and democratic counties/states suceeded?  
+   - Trumpland - what is their contribution to the US economy?  
+   - Map it, and post on my datasciy.com and 10sigmarisk.com.  
+   
