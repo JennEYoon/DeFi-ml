@@ -1,2 +1,6 @@
 #  Create and save jupyter notebooks here.
 
+#### Update 10/19/2019 - create test notebook.  
+
+ * Jupyter notebook with 3d projection plot. 
+ 
