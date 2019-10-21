@@ -5,5 +5,6 @@
  * Jupyter notebook with 3d projection plot. 
    - GITHUB does NOT render any of the 3D projection notebooks today.
    - Check back later.  I think it worked before.  Github temporary issue?  
+   - Uploaded ipython checkpoints, but still does not render any of the 3 notebookd for 3D projections. 
    - 10/21/2019 2:48 PM. 
  
