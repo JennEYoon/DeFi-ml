@@ -20,8 +20,8 @@ Repeat for each dataset:
 
  1. Short Example(s):  State wage ratios between 90th and 10th percentiles, in May 2014.
 
-    ![By State Inequality Map](inequality/BLS-By-State-Inequality.png)  
-     <a href="inequality/real-hh-inc.pdf">Real Household Incomes</a>
-     <img source="https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-Percentiles-Occupation.png" width="600" height="auto" alt="BLS Percentiles by Occupation">
+    ![By State Inequality Map](inequality/BLS-By-State-Inequality.png)   
+     <a href="inequality/real-hh-inc.pdf">Real Household Incomes</a>  
+     <img source="inequality/BLS-Percentiles-Occupation.png" width="600" height="auto" alt="Percentiles by Occupation">  
 
 #### Footer:  Issue#1: Inequality Docs.   
