@@ -22,7 +22,7 @@ Repeat for each dataset:
 
     ![By State Inequality Map](inequality/BLS-By-State-Inequality.png)   
      
-<a href="inequality/real-hh-inc.pdf">Real Household Incomes</a>  
+<img src="inequality/real-hh-inc.pdf" alt="Real Household Incomes" width="600" />  
      
 <img src="inequality/BLS-Percentiles-Occupation.png" alt="Percentiles by Occupation" width="600" height="auto" />  
 
