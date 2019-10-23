@@ -21,7 +21,9 @@ Repeat for each dataset:
  1. Short Example(s):  State wage ratios between 90th and 10th percentiles, in May 2014.
 
     ![By State Inequality Map](inequality/BLS-By-State-Inequality.png)   
-     <a href="inequality/real-hh-inc.pdf">Real Household Incomes</a>  
-     <img source="inequality/BLS-Percentiles-Occupation.png" width="600" height="auto" alt="Percentiles by Occupation">  
+     
+<a href="inequality/real-hh-inc.pdf">Real Household Incomes</a>  
+     
+<img src="inequality/BLS-Percentiles-Occupation.png" alt="Percentiles by Occupation" width="600" height="auto" />  
 
 #### Footer:  Issue#1: Inequality Docs.   
