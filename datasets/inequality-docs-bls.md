@@ -22,6 +22,6 @@ Repeat for each dataset:
 
     ![By State Inequality Map](inequality/BLS-By-State-Inequality.png)  
      <a href="inequality/real-hh-inc.pdf">Real Household Incomes</a>
-     <img source="inequality/real-hh-inc.pdf" width="600" height="auto">
+     <img source="https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-Percentiles-Occupation.png" width="600" height="auto" alt="BLS Percentiles by Occupation">
 
 #### Footer:  Issue#1: Inequality Docs.   
