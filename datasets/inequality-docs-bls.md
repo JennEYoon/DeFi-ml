@@ -22,5 +22,7 @@ Repeat for each dataset:
 
     ![By State Inequality Map](inequality/BLS-By-State-Inequality.png)  
     ![Real Household Income by Percentiles](inequality/real-hh-inc.pdf)
+     inequality/real-hh-inc.pdf  
+     https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/real-hh-inc.pdf  
 
 #### Footer:  Issue#1: Inequality Docs.   
