@@ -12,4 +12,14 @@
     - Create 2D and 3D by itself (not in a row) and try again.  
     - Still don't work.  Only 2d and try again.  
     
+#### nbviewer for showing Jupyter Notebook when Github renderer fails.
+
+https://nbviewer.jupyter.org/  
+
+ - https://nbviewer.jupyter.org/github/JennEYoon/SECdataPy/blob/master/nbs/matplotlib-3d-projection-v3.ipynb  
+
+ - https://nbviewer.jupyter.org/github/JennEYoon/SECdataPy/blob/master/nbs/matplotlib-2d-only.ipynb  
+
+ - https://nbviewer.jupyter.org/github/JennEYoon/SECdataPy/blob/master/nbs/matplotlib-3d-tests.ipynb  
+ 
     
