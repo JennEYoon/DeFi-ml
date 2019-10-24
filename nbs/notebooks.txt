@@ -7,4 +7,7 @@
    - Check back later.  I think it worked before.  Github temporary issue?  
    - Uploaded ipython checkpoints, but still does not render any of the 3 notebookd for 3D projections. 
    - 10/21/2019 2:48 PM. 
- 
+ * Update 10/24/2019 1:17 AM  
+    - None of the 3 Jupyter notebooks with 3D projection are rendering.  
+    - Create 2D and 3D by itself (not in a row) and try again.
+    
