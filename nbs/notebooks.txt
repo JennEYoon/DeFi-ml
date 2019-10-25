@@ -22,4 +22,6 @@ https://nbviewer.jupyter.org/
 
  - https://nbviewer.jupyter.org/github/JennEYoon/SECdataPy/blob/master/nbs/matplotlib-3d-tests.ipynb  
  
+ My Github SECdatapy still does not render any notebooks with graphs.  Although the same notebooks uploaded to WCC repo shows.  Reuploaded from scratch and still no show.  
+ 
     
