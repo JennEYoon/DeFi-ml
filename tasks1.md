@@ -91,5 +91,12 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
  * Copy "Inequality Docs Template" to "data/inequality" folder in "branch inequality".
  * Commit to this branch, push, see what happens to Github commits count.
  * Optional -- add new commit to "inequality docs" pull request under Hactoberfest.
- * GeoPandas -- explore.  10/12/2019.
+ * GeoPandas -- explore.  10/12/2019. 
+ 
+#### 10/27/2019 Update  
+
+ * GeoSnap -- still to do. 20 days.  PR finish on Monday.  
+ * 6 PR done for Hactoberfest.  WCC and SECdataPy repo.  
+ 
+ 
  
