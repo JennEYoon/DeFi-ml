@@ -98,5 +98,10 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
  * GeoSnap -- still to do. 20 days.  PR finish on Monday.  
  * 6 PR done for Hactoberfest.  WCC and SECdataPy repo.  
  
+#### 10/28/2019 Monday  
+
+ * GeoSnap -- working on this today.  
+ * Jupyter Notebooks 3d, 2d matplotlib -- WORKS! Renders today all notebooks.  
  
  
+--- end ---  
