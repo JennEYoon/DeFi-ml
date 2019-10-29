@@ -12,6 +12,10 @@
     - Create 2D and 3D by itself (not in a row) and try again.  
     - Still don't work.  Only 2d and try again.  
     
+ * 10/24/2019 -- My Github SECdatapy still does not render any notebooks with graphs.  Although the same notebooks uploaded to WCC repo shows.  Reuploaded from scratch and still no show.  
+  
+ * 10/28/2019 -- Yeah!!!  All notebooks in this folder renders now.  3d, 2d, mixture.  Github seems to have problem on some days.  OK to use Github, but have nbviewer as backup.   
+  
 #### nbviewer for showing Jupyter Notebook when Github renderer fails.
 
 https://nbviewer.jupyter.org/  
@@ -22,6 +26,6 @@ https://nbviewer.jupyter.org/
 
  - https://nbviewer.jupyter.org/github/JennEYoon/SECdataPy/blob/master/nbs/matplotlib-3d-tests.ipynb  
  
- My Github SECdatapy still does not render any notebooks with graphs.  Although the same notebooks uploaded to WCC repo shows.  Reuploaded from scratch and still no show.  
+
  
     
