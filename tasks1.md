@@ -104,4 +104,12 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
  * Jupyter Notebooks 3d, 2d matplotlib -- WORKS! Renders today all notebooks.  
  
  
+#### 11/8/2019  
+
+ * from scipy2018 geospatial notebook  
+   Trump gini in a bottle notebook: https://github.com/JennEYoon/scipy2018-geospatial-data/blob/master/_solved/case-gini-in-a-bottle-the-trump-vote.ipynb  
+   Extend with 2018 and 2019 vote results.  
+   Do higher country-level inequality lead to more Trump voters? 
+   What else explains Trump voters?  Manufacturing job loss in reason per Yang, Relative economic poverty or recent decline in region?  See what changed in MSA areas and by State.  
+
 --- end ---  

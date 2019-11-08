@@ -1,0 +1,142 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@JennEYoon 
+1
+1100JennEYoon/scipy2018-geospatial-data
+forked from knaaptime/scipy2018-geospatial-data
+ Code Pull requests 0 Projects 0 Wiki Security Insights Settings
+scipy2018-geospatial-data
+/
+_solved
+/
+case-gini-in-a-bottle-the-trump-vote.ipynb
+ 
+
+1
+{
+2
+ "cells": [
+3
+  {
+4
+   "cell_type": "code",
+5
+   "execution_count": 17,
+6
+   "metadata": {},
+7
+   "outputs": [],
+8
+   "source": [
+9
+    "%matplotlib inline\n",
+10
+    "\n",
+11
+    "import pandas as pd\n",
+12
+    "import geopandas as gpd\n",
+13
+    "import libpysal as lp\n",
+14
+    "import esda\n",
+15
+    "import numpy as np\n",
+16
+    "import matplotlib.pyplot as plt"
+17
+   ]
+18
+  },
+19
+  {
+20
+   "cell_type": "markdown",
+21
+   "metadata": {},
+22
+   "source": [
+23
+    "# Case Study: *Gini in a bottle: Income Inequality and the Trump Vote*"
+24
+   ]
+25
+  },
+26
+  {
+27
+   "cell_type": "markdown",
+28
+   "metadata": {},
+29
+   "source": [
+30
+    "#### Read in the table and show the first three rows"
+31
+   ]
+32
+  },
+33
+  {
+34
+   "cell_type": "code",
+35
+   "execution_count": 18,
+36
+   "metadata": {},
+37
+   "outputs": [
+38
+    {
+39
+     "data": {
+40
+      "text/html": [
+41
+       "<div>\n",
+42
+       "<style scoped>\n",
+43
+       "    .dataframe tbody tr th:only-of-type {\n",
+44
+       "        vertical-align: middle;\n",
+45
+       "    }\n",
+46
+       "\n",
+47
+       "    .dataframe tbody tr th {\n",
+48
+       "        vertical-align: top;\n",
+49
+       "    }\n",
+@JennEYoon
+Commit changes
+Commit summary
+Update case-gini-in-a-bottle-the-trump-vote.ipynb
+Optional extended description
+Add an optional extended description…
+
+Choose which email address to associate with this commit
+
+ Commit directly to the master branch.
+ Create a new branch for this commit and start a pull request. Learn more about pull requests.
+ 
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
