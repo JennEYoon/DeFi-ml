@@ -1,4 +1,4 @@
-#  Task List for SEC data ml  
+#  My Markdown Cheatsheet  
 
 #### Author: Jennifer E. Yoon  
 
@@ -44,9 +44,12 @@ Insert Image
 Link to Google Drive Image: https://drive.google.com/file/d/1wShQ5PbP_AMeZQbS7l0x0Q_63jQlhTSi/view?usp=sharing  
  
 **Insert local image, resize with html:**  
+html code: `<img src="../master/jennifer_lawrence_bobcut.png" alt="Jennifer Lawrence" width="250">`
 <img src="../master/jennifer_lawrence_bobcut.png" alt="Jennifer Lawrence" width="250">
 
+
 **Insert with markdown, no resizing:**  
+markdown code: `![test image size](../master/jennifer_lawrence_bobcut.png)`  
 ![test image size](../master/jennifer_lawrence_bobcut.png)
  
  **Image with margins and center alignment:**  
