@@ -12,5 +12,6 @@ My earlier projects will focus on visualization using various Python graphics li
 #### History:  
 
  * Started repo on 8/24/2019 2:00 AM EST  
- * Deleted repo.  Created a new repo with a different name, "SECdataPy", on 9/6/2019.
-   - In order to clear up commit history.  No other easy way to squash commit history.  
+ * Updated Inequality data from US Census and Department of Labor  
+ * Created Issue #1 Inequality Docs.  
+ 
