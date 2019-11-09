@@ -112,4 +112,7 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
    Do higher country-level inequality lead to more Trump voters? 
    What else explains Trump voters?  Manufacturing job loss in reason per Yang, Relative economic poverty or recent decline in region?  See what changed in MSA areas and by State.  
 
+ * Contact PyData - SEC Edgar repo person.  Look over his trading model.  Any thoughts?  
+ * Connect with him on LinkedIn.  
+ 
 --- end ---  
