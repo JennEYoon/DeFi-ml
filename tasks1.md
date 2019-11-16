@@ -113,6 +113,13 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
    What else explains Trump voters?  Manufacturing job loss in reason per Yang, Relative economic poverty or recent decline in region?  See what changed in MSA areas and by State.  
 
  * Contact PyData - SEC Edgar repo person.  Look over his trading model.  Any thoughts?  
- * Connect with him on LinkedIn.  
+ * Connect with him on LinkedIn - done 11/16/2019.  
+ * Ken Nicholaus.  Seems like a wild guy. Could be a risk.  Repo has interesting super-resolution DL repo, but take a look at the stock investing repo -- nothing original, but something to get started on...
  
+ * Try to finishe Update to GeoSnap PR -- week of 11/16/2019.  
+   1. Fix slice.  
+   2. Then install and rune xample notebooks.  
+   3. Write tests. 
+   4. SUbmit revised PR.
+   
 --- end ---  
