@@ -1,23 +1,26 @@
-#  Install notes for SEC data ml  
+#  Install notes for SEC data Py  
 
 Date:  8/25/2019  7:50 PM  
 
     * Created new conda base environment in WSL Ubutu.
       \\wsl$\Ubuntu\home\jyoon\conda3\python3.7\
       Installed ipython/jupyter notebook interface
+       * VS Code can now open .ipynb directly from File Explorer.
       Installed numpy, pandas, matplotlib, seaborn, scipy, 
           sklearn, pytorch, tensorflow.  
           tensorflow-datasets installed.  
-          To update to TensorFlow v 2.0. Out of Beta now 9/21/2019.  
+          To update to TensorFlow v 2.0 - done.  
       
     * Root local repo on my machine
-      C:\python\secdataml
+      C:\python\secdatapy
       Google Drive backup & sync added.
       .gitignore file added.
       
     * Both ipython shell and jupyter notebook works.
       Need to copy URL to Chrome browser (no browser installed on Ubuntu).
-      Firefox on Ubuntu installed, but can't open window. -- works now 8/26/2019.  Disabled auto-startup VcXServ, Find out how to fix startup.
+      Firefox on Ubuntu installed, but can't open window. -- works now 8/26/2019.  
+       * Disabled auto-startup VcXServ, Find out how to fix startup.
+       * Install Chrome on Ubuntu -- use instead.  
       
     * Ubuntu sudo password is my usual.
     
