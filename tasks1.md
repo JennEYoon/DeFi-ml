@@ -118,7 +118,7 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
  
  * Try to finishe Update to GeoSnap PR -- week of 11/16/2019.  
    1. Fix slice.  
-   2. Then install and rune xample notebooks.  
+   2. Then install and run example notebooks.  
    3. Write tests. 
    4. SUbmit revised PR.
    
