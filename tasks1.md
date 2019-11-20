@@ -114,7 +114,13 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
 
  * Contact PyData - SEC Edgar repo person.  Look over his trading model.  Any thoughts?  
  * Connect with him on LinkedIn - done 11/16/2019.  
- * Ken Nicholaus.  Seems like a wild guy. Could be a risk.  Repo has interesting super-resolution DL repo, but take a look at the stock investing repo -- nothing original, but something to get started on...
+ * Ken Nicholaus.  Seems like a wild guy. Could be a risk. 
+    - Repo has interesting super-resolution DL repo, but take a look at the stock investing repo -- nothing original, but something to get started on...  
+    - Looked at Trading-AI repo.  Nothing material on the Github.  Only some screen shots, not a single ML model on it.  
+    - Exchanges some ideas via email.  
+    - Not sure if he really has 1000 ML models and 50K trading technical graphs he claims.  
+    - Trust my gut, don't get sucked in.  DO some free work on AWS Aurora, because I will be studying this anyway.  
+    - He seems like a shyster.  Not doing any of his own work but trying to get others to do all the work for him and not pay them by claiming they are co-founders, yeah right.  
  
  * Try to finishe Update to GeoSnap PR -- week of 11/16/2019.  
    1. Fix slice.  
