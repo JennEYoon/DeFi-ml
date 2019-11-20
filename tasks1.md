@@ -122,4 +122,10 @@ https://github.com/JennEYoon/SECdataPy/blob/master/datasets/inequality/BLS-By-St
    3. Write tests. 
    4. SUbmit revised PR.
    
+#### Nov 19, 2019 Idea:  
+
+ * While messaging with Ken Nicholas from PyData NY, got the idea to create a Blog for Traders, with easy to incorporate data on stocks, options, and futures.  He didn't seem to be convinced to go this route as his first product.  Maybe I can do this instead?  Revive StockWiki.com and WallStWiki.com?  Blog writing platform, data won't be behind "copyright" wall.  Charts will not be behind "copyright" wall.  Can embed in users personal blog/website.  Maybe even use commercially?  Look at Seeking Alpha, may be similar.  
+ 
+ Hook up Amazon Aurora database -- good test case with Ken N.  
+   
 --- end ---  
