@@ -4,7 +4,7 @@
 
 ## Author: Jennifer E. Yoon  
 
-## Ideas as of Nov 29, 2019  
+## 1. Ideas:   
 
 ### Resusitate domain.  Currently in AWS with "Under Development" sign.  
 
@@ -12,8 +12,15 @@
 
 Start by downloading some stocks and building a database.  
 
-## Website Components  
+## 2. Website Components:    
 
 ### AOTH -- 3rd party authorization (create new user accounts, verify, passwords)  
  
 ### ,, 
+
+
+## 3. Resources & Links Saved  
+
+### Books:  
+
+ * Python for Finance  --  
