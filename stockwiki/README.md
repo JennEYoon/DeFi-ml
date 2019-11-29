@@ -4,7 +4,7 @@
 
 ## Author: Jennifer E. Yoon  
 
-## Plan  
+## Ideas  
 
 ###  Idea 1 - AWS Aurora database hookup  
 
