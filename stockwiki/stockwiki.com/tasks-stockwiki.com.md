@@ -3,17 +3,18 @@
 ## Date: Nov 29, 2019 started.  
 
 ## Author: Jennifer E. Yoon  
+.  
 
-## 1. Ideas:   
+## I. Ideas:   
 
 ### Resusitate domain.  Currently in AWS with "Under Development" sign.  
 
 ### Hook up AWS SQL database.  
 
-Start by downloading some stocks and building a database.  
+ * Start by downloading some stocks and building a database.  
+.  
 
-## 2. Website Components:  
-
+## II. Website Components:  
 
 ### 1. Testing   
 
@@ -43,7 +44,10 @@ Start by downloading some stocks and building a database.
  * Do Sequential and Reinforcement learning -- for text reports, conference call voice analysis?  
  * Body language reader -- for lying or uncomfortable, visual deep learning.  
 
-## 3. Resources & Links Saved  
+## III.  Uncertainty   
+.  
+
+## IIV. Resources & Links Saved  
 
 ### Books:  
 
