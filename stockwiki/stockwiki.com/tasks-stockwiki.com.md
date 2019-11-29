@@ -7,9 +7,9 @@
 
 ## I. Ideas:   
 
-### Resusitate domain.  Currently in AWS with "Under Development" sign.  
+### 1. Resuscitate domain.  Currently in AWS with "Under Development" sign.  
 
-### Hook up AWS SQL database.  
+### 2. Hook up AWS SQL database.  
 
  * Start by downloading some stocks and building a database.  
 .  
@@ -44,7 +44,18 @@
  * Do Sequential and Reinforcement learning -- for text reports, conference call voice analysis?  
  * Body language reader -- for lying or uncomfortable, visual deep learning.  
 
+### 8. Go to Market  
+
+ * Post links to hacker-news, etc.  
+ * Buy Google Ad dollars with $150 credit.  
+.  
+
 ## III.  Unknowns and Risks     
+
+ * Code can be copied by others 
+    - move repo to private after going live.  
+    - Can give interviewers permission to view repo privately.  
+    - Add copyritht notice to repo.  
 .  
 
 ## IIV. Resources & Links    
