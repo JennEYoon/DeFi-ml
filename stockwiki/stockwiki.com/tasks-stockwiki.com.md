@@ -4,16 +4,16 @@
 
 ## Author: Jennifer E. Yoon  
 
-### Ideas as of Nov 29, 2019  
+## Ideas as of Nov 29, 2019  
 
-#### Resusitate domain.  Currently in AWS with "Under Development" sign.  
+### Resusitate domain.  Currently in AWS with "Under Development" sign.  
 
-#### Hook up AWS SQL database.  
+### Hook up AWS SQL database.  
 
 Start by downloading some stocks and building a database.  
 
-### Website Components  
+## Website Components  
 
-#### AOTH -- 3rd party authorization (create new user accounts, verify, passwords)  
+### AOTH -- 3rd party authorization (create new user accounts, verify, passwords)  
  
-#### 
+### ,, 
