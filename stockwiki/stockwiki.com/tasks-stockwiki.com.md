@@ -44,10 +44,10 @@
  * Do Sequential and Reinforcement learning -- for text reports, conference call voice analysis?  
  * Body language reader -- for lying or uncomfortable, visual deep learning.  
 
-## III.  Uncertainty   
+## III.  Unknowns and Risks     
 .  
 
-## IIV. Resources & Links Saved  
+## IIV. Resources & Links    
 
 ### Books:  
 
