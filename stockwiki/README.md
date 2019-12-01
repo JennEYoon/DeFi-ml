@@ -1,4 +1,4 @@
-# Development repo for StockWiki.com   
+# StockWiki.com Development     
 
 ## Date Started: Nov 29, 2019  
 
