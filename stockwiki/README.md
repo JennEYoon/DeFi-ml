@@ -25,45 +25,48 @@ Some sort of charts and analysis using stock data.
 Energy Trading data from EIA.gov.  
 Plotly interactive charts.  
 
-###  Idea 2 - Add trend analysis using NLP  
+### Idea 2 -- Look for ML and DL in Finance & Trading.  
 
+ * ML models -- decision trees, random forest, k-means clustering, PCA dimensionality reduction (economic and interest rate data), svm. 
+ * Deep Learning -- use shortcuts and clobber together other people's models and use on stock data. NLP and text. CNN on face recognition.  
+
+**Trend Analysis:**
  * Google search term trends  
- * Earning call buy/hold/sell -- aggregation and individual  
+ * Earning call buy/hold/sell -- aggregation and individual  (NLP?)
  * Volumne data  
  * Insider buy/sell data  
  * Float percentage outstanding -- out of total issued shares.  
- 
-### Idea 3 - Credit Rating Recommendation & Predition model  
-
- * Use Credit Cards data  
- * Use FINRA TRACE transition matrix  
- * Look at Edgar Online -- see if any data can be scrapted for one-time use.  
- 
- ### Idea 4 - Fundamental Stock Value analysis  
- 
-  * Get data from SEC Edgar - source.  
-  * Compare with Edgar Online SEC Edgar data -- scrape to test.  
-  
-### Idea 5 -- Python code for Option Pricing Model  
+   
+### Idea 3 -- Python code for Option Pricing Model  
 
  * Use Python for Finance book -- code examples  
  * Do a generic one for dividend paying American Option.  
  * Extend to WTI and Brent futures, option, swaption.  
- * Compare to history & spot prices.
+ * Compare to history & spot prices.   
+   
+### Idea 4 - Credit Rating Recommendation model, CDO pricing model.    
+
+ * Use Credit Cards data  
+ * Use CDO modeling, get data from somewhere.  Hull Risk book.  
+ * Use FINRA TRACE credit transition matrix  
+ * Look at Edgar Online -- see credit rating trasition data is availble during development, not for commercial use later.  
  
 ### Idea 5 -- tie in Geospatial Economic Analysis  
  
  * Mapping using geosnap, geopandas, pysal.  
-  
-### Idea 6 -- Look for other uses of ML in Finance & Trading.  
+ * Macro Economic data from FED, World Bank, etc.  
+ 
+ ### Idea 6 - Fundamental Stock Value analysis & Narrative Company WIKI.   
+ 
+  * Get data from SEC Edgar - source.  
+  * Compare with Edgar Online SEC Edgar data -- scrape to test.  
+  * Write Wikis on top banks.  Suppliment with public data from Wikipedia.  
 
- * ML models -- decision trees, random forest, k-means clustering, PCA dimensionality reduction (economic and interest rate data), svm.  
- * Deep Learning -- use shortcuts and clobber together other people's models and use on stock data. NLP and text. CNN on face recognition.  
-  
 ### Other Ideas:  
 
  * AOUTH -- user account creation.
  * Bootstrap Framework
- * Learn a lit about Javascript, React & Preact, Vue.
+ * Learn a lit about Javascript, React & Preact, Vue.  
+ * Add shopping cart and sell Merch?  Embroidered math symbols on iron-on pockets.  
 
   
