@@ -1,6 +1,6 @@
 # StockWiki.com Development     
 
-## Date Started: Nov 29, 2019  
+## Date Started: Nov 26, 2019  
 
 ## Author: Jennifer E. Yoon  
 
