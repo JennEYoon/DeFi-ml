@@ -2,8 +2,9 @@
 
 ## Date started Dec 2, 2019.  
 
- * List 1
- * List 2
- * List 3  
+ * Revise format with Bootstrap. 
+ * Write 1 new article on Regulatory News.
+ * Insert 1 new Machine Learning application to investing.
+ 
 
 
