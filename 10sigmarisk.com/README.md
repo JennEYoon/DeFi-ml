@@ -1,5 +1,7 @@
 # 10SigmaRisk.com redesign website plan.  
 
+Repo public for now.  Machine learning portion may become private once it goes live.  
+
 ## Start Date:  Dec 1, 2019  
 
 ## Author: Jennifer Yoon  
