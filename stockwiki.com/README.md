@@ -1,10 +1,13 @@
 # StockWiki.com Development     
 
+This repo will remain public to showcase my development process.  Functions as a programming and web development portfolio.  
+
 ## Date Started: Nov 26, 2019  
 
 ## Author: Jennifer E. Yoon  
 
 ## Goal: To have a live website by March, 15, 2020 (Ides of March).
+
 
 ### Next Actions:  
 
