@@ -1,6 +1,7 @@
 # StockWiki.com Development     
 
 This repo will remain public to showcase my development process.  Functions as a programming and web development portfolio.  
+Use HTML5, CSS3, javascript, and Bootstrap Framework.  Also use Amazon Aurora for MySQL. (Postgres seem to have minimum machine set as t2.  No free layer available.)  Also research React/Preact and Vue frameworks.  
 
 ## Date Started: Nov 26, 2019  
 
