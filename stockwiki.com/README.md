@@ -68,7 +68,7 @@ Plotly interactive charts.
 
 ### Other Ideas:  
 
- * AOUTH -- user account creation.
+ * AOTH -- user account creation.
  * Bootstrap Framework
  * Learn a lit about Javascript, React & Preact, Vue.  
  * Add shopping cart and sell Merch?  Embroidered math symbols on iron-on pockets.  
