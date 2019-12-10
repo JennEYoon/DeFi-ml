@@ -1,4 +1,4 @@
-# Redesign website development for 10SigmaRisk.com  
+# 10SigmaRisk.com redesign website plan.  
 
 ## Start Date:  Dec 1, 2019  
 
