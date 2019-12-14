@@ -83,3 +83,5 @@ Learn a lit about Javascript, React & Preact, Vue.
 Next Actions:
 Create a 1-page website for StockWiki.
 Add Bootstrap Framework. Watch tutorials.
+
+ * Github problem with capitalization in folder names.  Sync with Windows folders does not work until 2nd full cycle pull/push.  

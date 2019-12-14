@@ -4,6 +4,14 @@ Link to GARP folder, local: C:\gdrive\10SigmaRisk\GarpReadings
 
 Move github files to SECdatapy repo. 
 
+### Revise for Risk Management audience.  
+
+ * Look for new clients.
+ * Geo-economic mapping demo.
+ * Revise format with Bootstrap. 
+ * Write 1 new article on Regulatory News.
+ * Insert 1 new Machine Learning application to investing.
+
 #### GARP Oct 2019 Tasks:  
 
  * Read Chapters that were sent to me on QA.  
@@ -19,4 +27,7 @@ Move github files to SECdatapy repo.
  * Picketty books - Got Audible & Kindle book.  Reproduce some examples.  
  * Use geo-mapping to show inequality in US by state and by MSA region (Census data, geosnap?).  
  * Use geo-mapping to see what happens if coastal elete states were to succeed, how much income is generated in coastal areas.  
+
+
+
  
