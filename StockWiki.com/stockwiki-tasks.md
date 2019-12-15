@@ -65,6 +65,7 @@
  * Python for Finance  --  
  * Advances in Financial ML book -- 
  * Capital, Picketty book -- 
+ * Hands-on Machine Learning, 2nd ed. --  
  
  Repo for Revived StockWiki.com development.
 Date started: December 1, 2019
