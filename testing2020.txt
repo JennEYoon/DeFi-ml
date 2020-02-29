@@ -1,2 +1,2 @@
-nano text for git uploading.
+nano test for git uploading.
 
