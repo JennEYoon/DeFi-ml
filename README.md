@@ -14,4 +14,4 @@ My earlier projects will focus on visualization using various Python graphics li
  * Started repo on 8/24/2019 2:00 AM EST  
  * Updated Inequality data from US Census and Department of Labor  
  * Created Issue #1 Inequality Docs.  
- 
+ * June 10, 2020 moved local repo to Ubuntu ~/work/SECdataPy/  
