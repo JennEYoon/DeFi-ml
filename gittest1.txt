@@ -1,1 +1,2 @@
 add test, after local folder moved from c: to Ubutu/work.
+Test edit from Github.  Test git pull to new location on Ubuntu. 
