@@ -15,3 +15,4 @@ My earlier projects will focus on visualization using various Python graphics li
  * Updated Inequality data from US Census and Department of Labor  
  * Created Issue #1 Inequality Docs.  
  * June 10, 2020 moved local repo to Ubuntu ~/work/SECdataPy/  
+ * Local repo moved again, then c: repo deleteed. June 11, 2020. 
