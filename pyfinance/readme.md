@@ -8,3 +8,4 @@ Book has standard pricing calculating code for options, futures, etc.
 #### To do:  
   * Reproduce Black-Scholes option pricing model in python. Try first on my own, then peak to help speed up dev.  
   * Also try time-series analysis (forecasting) on stocks or WTI futures.  
+  * This will be a good place to show downloading data into Excel spreadsheet, then using it to calculate returns, correlation, forecast price for future.  
