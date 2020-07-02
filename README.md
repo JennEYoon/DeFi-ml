@@ -18,3 +18,4 @@ My earlier projects will focus on visualization using various Python graphics li
  * Created Issue #1 Inequality Docs.  
  * June 10, 2020 moved local repo to Ubuntu ~/work/SECdataPy/  
  * Local repo moved again, then c: repo deleteed. June 11, 2020. 
+ * June 2020 - Add folder for pyfinance -- SQL-connector, TA-LIB, quandl, python-for-finance book.  
