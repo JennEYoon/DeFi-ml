@@ -1,6 +1,8 @@
 # SECdataPy  
 My Python machine learning project using SEC (Securities and Exchange Commission) data.      
 
+### Note: June 2020 - default branch name has changed from "master" to "main" in support of Black Lives Matter.  
+
 #### Author: Jennifer E. Yoon  
 
 #### Description:  
