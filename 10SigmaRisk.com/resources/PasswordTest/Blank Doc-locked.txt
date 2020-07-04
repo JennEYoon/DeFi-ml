@@ -1,0 +1,11 @@
+Blank Doc, NOT password protected.
+Using word, can only password protect WORD Formats, doc & docx.
+
+Examples
+{ DATE \@ "dddd, MMMM d" } displays Saturday, November 26
+{ DATE \@ "h:mm am/pm, dddd, MMMM d" } displays 10:00 AM, Saturday, November 26
+Syntax
+When you view the Date field code in your document, the syntax looks like this:
+{ DATE [ \@ "Date-Time Picture"] [Switches] }
+
+

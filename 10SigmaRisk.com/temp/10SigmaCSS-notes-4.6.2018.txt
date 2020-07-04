@@ -1,0 +1,14 @@
+
+Link to temporary uploaded 10SigmaRisk.com file:
+
+   http://10sigmarisk.com/temp/index-10SR.html
+   
+   http://10sigmarisk.com/temp/mystyle-10SR.css
+   
+   
+   
+In 2018, CSS Grid is better than Bootstrap. Grid is core, while Bootstrap is a 3rd party framework.
+
+VS Code – Live Server
+Emmet code coloring/completion
+
