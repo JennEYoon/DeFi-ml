@@ -15,3 +15,5 @@ Institutions: SEC, FINRA, FED
 What is available as a wiki at other sites?  
 
 Make money from advertising on site.  
+
+Freelance website, ML and data usage Consultant to institutional money? 
