@@ -20,3 +20,4 @@ Connect with Thomas and try to contribute to Spring SKLearn this weekend, maybe 
  * Apologize to Eli, and ask him to delete my previous PR attempt. Since it failed, wink.  
 
 Say hello to Juan and send him an email to check-in.  
+Send greeting emails to people who were at the Friday networking :-)  
