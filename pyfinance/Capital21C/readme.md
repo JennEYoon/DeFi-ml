@@ -18,3 +18,5 @@ Connect with Thomas and try to contribute to Spring SKLearn this weekend, maybe 
    
  * PySAL and geosnap -- try to contribute something, documentation or example First Issue, if they have one.    
  * Apologize to Eli, and ask him to delete my previous PR attempt. Since it failed, wink.  
+
+Say hello to Juan and send him an email to check-in.  
