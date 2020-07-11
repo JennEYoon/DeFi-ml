@@ -11,6 +11,10 @@ Connect with Thomas and try to contribute to Spring SKLearn this weekend, maybe 
  * Make a list of all the ways ML/DS is used in finance & trading.  
    - provide some examples on my website for 10 Sigma Risk, offer to work as freelance on these projects. 
    - write personal evaluation of usefulness, impact of each application of ML to finance.  
+   - Maybe some plotting, esp. interactive geo-plotting, can be used for client interface (Craig's drug overdose case)?
+   - Or in marketing?  
+   - Or web client login and security?  Responsiveness?  Presentation of ML results? Notebooks?
+   - Hummmm
    
  * PySAL and geosnap -- try to contribute something, documentation or example First Issue, if they have one.    
  * Apologize to Eli, and ask him to delete my previous PR attempt. Since it failed, wink.  
