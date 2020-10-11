@@ -1,4 +1,4 @@
-# SECdataPy  
+# SEC Data repo  
 My Python machine learning project using SEC (Securities and Exchange Commission) data.      
 
 ***Note: Renamed "master" to "main" branch in support of Black Lives Matter, June 2020***
