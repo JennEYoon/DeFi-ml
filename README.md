@@ -20,3 +20,4 @@ My earlier projects will focus on visualization using various Python graphics li
  * Local repo moved again, then c: repo deleteed. June 11, 2020. 
  * June 2020 - rename "master" to "main" default branch.  
  * Oct 2020 Made public again. 
+ * 10/27/2020 -- move out more private files.  
