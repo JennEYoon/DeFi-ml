@@ -7,7 +7,7 @@ My Python machine learning project using SEC-data (U.S. Securities & Exchange Co
 
 #### Description:  
 
-My goal is to provide examples of using Machine Learning on SEC data and financial derivatives trading data more generally.  I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, SciPy, and Scikit-Learn.  I use the Jupyter Notebook as my interface for showing code.  Some projects from here are showcased at my data science website, **http://datasciY.com/projects.html** .
+My goal is to provide examples of using Machine Learning on SEC data and financial derivatives and economics data more generally.  I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, SciPy, and Scikit-Learn.  I use the Jupyter Notebook as my interface for showing code.  Some projects from here are showcased at my data science website, **http://datasciY.com/projects.html** .
 
 My earlier projects will focus on visualization using various Python graphics libraries.  My later projects will focus on applying commonly used Machine Learning methods to datasets from the financial industry.  
 
