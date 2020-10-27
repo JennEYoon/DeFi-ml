@@ -1,0 +1,5 @@
+# Private folders, docs -- moved out 10/27/2020.  
+
+SEC-data repo, public mode.  
+
+to C:/../webdev/repos-moved/ 
