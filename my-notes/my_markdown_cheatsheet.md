@@ -47,12 +47,12 @@ Image: https://drive.google.com/file/d/1wShQ5PbP_AMeZQbS7l0x0Q_63jQlhTSi/view?us
 **Insert local image, resize with html:**  
 html code: `<img src="jennifer_lawrence_bobcut.png" alt="Jennifer Lawrence" width="250">`  
 
-<img src="../main/my-notes/jennifer_lawrence_bobcut.png" alt="Jennifer Lawrence" width="250">
+<img src="jennifer_lawrence_bobcut.png" alt="Jennifer Lawrence" width="250">
 
 
 **Insert with markdown, no resizing:**  
-markdown code: `![test image size](../main/my-notes/jennifer_lawrence_bobcut.png)`  
-![test image size](./main/my-notes/jennifer_lawrence_bobcut.png)
+markdown code: `![test image size](jennifer_lawrence_bobcut.png)`  
+![test image size](jennifer_lawrence_bobcut.png)
  
  **Image with margins and center alignment:**  
 
