@@ -1,4 +1,4 @@
-This is forked, clone.  8/7/2020  
+Start 8/7/2020  
 SciPy 2020 tutorial - PySAL  
 Only minor edits after presentation.  
 Should not change very much.  
