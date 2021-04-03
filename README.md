@@ -1,4 +1,4 @@
-# SEC-data, public repo  
+# SEC-ml, public repo  
 My Python machine learning project using SEC-data (U.S. Securities & Exchange Commission) in finance, investing and derivatives.
 
 ***Note: Renamed "master" to "main" branch in support of Black Lives Matter, June 2020***
