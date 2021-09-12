@@ -1,5 +1,5 @@
-# SEC-ml, public repo  
-My securities machine learning projects - in finance, investing, and derivatives.
+# DeFi-SEC private repo
+Decentralized Finance and SEC Regulations.  
 
 ***Note: Renamed "master" to "main" branch in support of Black Lives Matter, June 2020***
 
