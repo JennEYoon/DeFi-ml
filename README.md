@@ -7,9 +7,9 @@ Decentralized Finance and SEC Regulations.
 
 #### Description:  
 
-My goal is to provide examples of using Machine Learning on SEC data and financial derivatives and economics data more generally.  I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, SciPy, and Scikit-Learn.  I use the Jupyter Notebook as my interface for showing code.  Some projects from here are showcased at my data science website, **http://datasciY.com/projects.html** .
+I repurposed this repo for studying the "DeFi" market, decentralized finance and SEC Regulations.  
 
-My earlier projects will focus on visualization using various Python graphics libraries.  My later projects will focus on applying commonly used Machine Learning methods to datasets from the financial industry.  
+I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, SciPy, and Scikit-Learn.  I use the Jupyter Notebook as my interface for showing code.  Some projects from here are showcased at my data science website, **http://datasciY.com/projects.html** .
 
 #### History:  
 
