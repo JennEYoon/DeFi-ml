@@ -7,7 +7,7 @@ Decentralized Finance and SEC Regulations.
 
 #### Description:  
 
-I repurposed this repo for studying the "DeFi" market, decentralized finance and SEC Regulations.  
+I repurposed this repo for studying "DeFi" (decentralized finance) and SEC Regulations.  
 
 I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, SciPy, and Scikit-Learn.  I use the Jupyter Notebook as my interface for showing code.  Some projects from here are showcased at my data science website, **http://datasciY.com/projects.html** .
 
