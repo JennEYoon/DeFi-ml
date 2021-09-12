@@ -19,3 +19,5 @@ My earlier projects will focus on visualization using various Python graphics li
  * June 2020 - rename "master" to "main" default branch.  
  * Oct 2020 Made public again. 
  * 10/27/2020 -- move out more private files.  
+ * 9/12/2021 -- private, rename ad DeFi for distriubted financial contracts.  
+ * Read Bill's books.  
