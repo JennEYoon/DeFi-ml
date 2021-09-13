@@ -13,3 +13,12 @@
 ## General Notes:  
 
 
+## References:  
+
+
+## Website Links:  
+
+
+## Main Exchanges:  
+
+
