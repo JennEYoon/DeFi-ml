@@ -1,2 +1,15 @@
-# Book reading notes, DeFi (Decentralized Finance)  
+# Books, reading notes, DeFi (Decentralized Finance)  
+
+ * book 1 
+
+ * book 2  
+
+ * book 3 
+
+ * book 4 
+
+----  
+
+## General Notes:  
+
 
