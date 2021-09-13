@@ -29,4 +29,11 @@
 
 
 
+## SEC Regulatatory Stands:  
+
+ * What are they thinking?   
+
+ * Chairman Gynsler?  
+
+
 
