@@ -21,4 +21,12 @@
 
 ## Main Exchanges:  
 
+#### Market and Liquidity considerations:  
+
+
+
+#### Total Market Capitalization - Growth Trends: 
+
+
+
 
