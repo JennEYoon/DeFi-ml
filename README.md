@@ -21,3 +21,4 @@ I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, Sc
  * 10/27/2020 -- move out more private files.  
  * 9/12/2021 -- private, rename ad DeFi for distriubted financial contracts.  
  * Read Bill's books.  
+ * To make public during Oct 2021 for Hactoberfest.  Create issues for public PR  
