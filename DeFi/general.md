@@ -33,5 +33,7 @@
 
  * What are they thinking?   
 
- * Chairman Gynsler?  
- * 
+ * Chairman Gensler: 
+<img src="Gensler-SEC-photo.jpg" alt="Photo Gensler" width="400" height="auto" >
+Gary Gensler
+Gary Gensler was nominated by President Joseph R. Biden to Chair the U.S. Securities and Exchange Commission on February 3, 2021, confirmed by the U.S. Senate on April 14, 2021, and sworn into office on April 17, 2021.
