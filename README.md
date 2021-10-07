@@ -1,4 +1,4 @@
-# DeFi-SEC private repo
+# DeFi-SEC repo
 Decentralized Finance and SEC Regulations.  
 
 ***Note: Renamed "master" to "main" branch in support of Black Lives Matter, June 2020***
