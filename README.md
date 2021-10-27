@@ -5,7 +5,7 @@ Decentralized Finance and Machine Learning with SEC Regulations.
 
 #### Description:  
 
-I repurposed this repo for studying "DeFi" (decentralized finance) and SEC Regulations.  
+I repurposed this repo for studying "DeFi" (decentralized finance) and ml (machine learning) with SEC regulations.    
 
 I use Python for Machine Learning projects, see **http://datasciY.com/projects.html** .
 
