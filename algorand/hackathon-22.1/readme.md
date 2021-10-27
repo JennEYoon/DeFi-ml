@@ -2,3 +2,7 @@
 
 Themes - Open (games), FutureFi, DigitalArt  
 
+Signup Oct 26, 2021, jenneyoon@gmail  
+
+HackerEarth.com is sponsor, just like hackerrank.com  
+
