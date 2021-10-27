@@ -1,5 +1,5 @@
-# DeFi-SEC repo
-Decentralized Finance and SEC Regulations.  
+# DeFi-ml repo
+Decentralized Finance and Machine Learning with SEC Regulations.  
 
 ***Note: Renamed "master" to "main" branch in support of Black Lives Matter, June 2020***
 
@@ -22,3 +22,7 @@ I use Python and its data science libraries, i.e., NumPy, Pandas, Matplotlib, Sc
  * 9/12/2021 -- private, rename ad DeFi for distriubted financial contracts.  
  * Read Bill's books.  
  * To make public during Oct 2021 for Hactoberfest.  Create issues for public PR  
+ * Changed repo name to "DeFi-ml" on 10/26/2021.  Edited description.  
+ * New direction is to combine machine learning with decentralized finance and Python dApps.    
+
+
