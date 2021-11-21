@@ -17,6 +17,6 @@ I use Python for machine learning projects, see **http://datasciY.com/projects.h
  * June 2020 - rename "master" to "main" default branch.  
  * 9/12/2021 -- rename repo DeFi-SEC for decentralized finance.  
  * 10/26/2021 -- rename repo DeFi-ml for decentralized finance and machine learning.  
- * New direction is to combine Python machine learning with decentralized finance.    
+ * New direction is to combine Python machine learning with block chain and cryptocurrency.     
 
 
